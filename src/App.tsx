@@ -1,10 +1,23 @@
-function App() {
+import React from "react";
+import { Routes, Route } from "react-router-dom";
+import HomePage from "./pages/HomePage";
+ import ServicesPage from "./pages/ServicePage";
+ import ConsultantPortfolioPage from "./pages/ConsultantPortfolio"
+import CoreValues from "./pages/CoreValues";
+import AboutUs from "./pages/AboutUs";
+import ContactUs from "./pages/ContactUs";
+
+const App: React.FC = () => {
   return (
-    <main style={{ padding: "2rem", fontFamily: "Inter, system-ui" }}>
-      <h1>My Modern React App 🚀</h1>
-      <p>Deployed with Vite & GitHub Pages.</p>
-    </main>
+    <Routes>
+      <Route path="/" element={<HomePage />} />
+    <Route path="/services" element={<ServicesPage />} />
+    <Route path="/consultantportfolio" element={<ConsultantPortfolioPage />} />
+    <Route path="/corevalues" element={<CoreValues />} />
+    <Route path="/aboutus" element={<AboutUs />} />
+    <Route path="/contactus" element={<ContactUs />} />
+    </Routes>
   );
-}
+};
 
 export default App;
