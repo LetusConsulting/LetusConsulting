@@ -13,6 +13,7 @@ module.exports = {
         "background-dark": "#050505",
         "terminal-gray": "#1a1a1a",
         accent: "#00f0ff",
+        "accent-blue": "#206381",
       },
       fontFamily: {
         display: ["Space Grotesk", "sans-serif"],

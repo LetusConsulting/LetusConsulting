@@ -3,12 +3,12 @@ import React from "react";
 
 const App: React.FC = () => {
   return (
-    <div className="bg-background-light dark:bg-background-dark text-slate-900 dark:text-white font-display overflow-x-hidden">
+    <div className="bg-background-dark dark:bg-background-dark text-accent dark:text-white font-display overflow-x-hidden">
       {/* Navbar */}
-      <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-border-dark bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-md">
+      <header className="sticky top-0 z-50 w-full border-b border-gray-200 dark:border-white/10 bg-background-dark/80 dark:bg-background-dark/80 backdrop-blur-md">
         <div className="px-6 md:px-20 xl:px-40 flex h-full items-center justify-between py-3 max-w-[1200px] mx-auto">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer text-slate-900 dark:text-white">
+          <div className="flex items-center gap-2 cursor-pointer text-accent dark:text-white">
             <div className="size-8 text-primary">
               <svg fill="none" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -37,27 +37,27 @@ const App: React.FC = () => {
                 {link}
               </a>
             ))}
-            <button className="flex min-w-[84px] items-center justify-center h-10 px-5 bg-primary hover:bg-primary/90 text-white font-bold rounded-lg shadow-lg shadow-primary/20">
+            <button className="flex min-w-[84px] items-center justify-center h-10 px-5 bg-primary hover:bg-accent text-black font-bold rounded-lg shadow-lg shadow-primary/20">
               Let's Talk
             </button>
           </div>
 
           {/* Mobile menu */}
-          <div className="flex md:hidden text-slate-900 dark:text-white">
+          <div className="flex md:hidden text-accent dark:text-white">
             <span className="material-symbols-outlined cursor-pointer">menu</span>
           </div>
         </div>
       </header>
-
+{/* slate900 - accent */}
       {/* Hero Section */}
       <section className="px-6 md:px-20 xl:px-40 py-10 md:py-20 flex flex-col lg:flex-row items-center gap-10 max-w-[1200px] mx-auto">
         <div className="flex flex-col gap-6 lg:w-1/2 justify-center">
           <div className="flex flex-col gap-4">
-            <div className="inline-flex items-center gap-2 rounded-full border border-border-dark bg-card-dark/50 px-3 py-1 w-fit">
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-card-dark/50 px-3 py-1 w-fit">
               <span className="material-symbols-outlined text-primary text-[16px]">terminal</span>
               <span className="text-xs font-medium text-gray-300 tracking-wide uppercase">System status: Online</span>
             </div>
-            <h1 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-[-0.033em] text-slate-900 dark:text-white">
+            <h1 className="text-5xl md:text-6xl font-black leading-[1.1] tracking-[-0.033em] text-accent dark:text-white">
               We speak fluent <span className="text-primary blinking-cursor">future</span>
             </h1>
             <h2 className="text-lg font-normal leading-relaxed text-slate-600 dark:text-gray-300 max-w-[500px]">
@@ -65,10 +65,10 @@ const App: React.FC = () => {
             </h2>
           </div>
           <div className="flex gap-4 pt-2">
-            <button className="flex items-center justify-center h-12 px-6 bg-primary hover:bg-blue-700 text-white font-bold rounded-lg shadow-lg shadow-primary/25">
+            <button className="flex items-center justify-center h-12 px-6 bg-primary hover:bg-accent text-black font-bold rounded-lg shadow-lg shadow-primary/25">
               View our work
             </button>
-            <button className="flex items-center justify-center h-12 px-6 bg-transparent border border-border-dark hover:border-primary/50 text-slate-900 dark:text-white font-bold rounded-lg hover:bg-card-dark transition-all">
+            <button className="flex items-center justify-center h-12 px-6 bg-transparent border border-white/10 hover:border-primary/50 text-accent dark:text-white font-bold rounded-lg hover:bg-card-dark transition-all">
               Our Stack
             </button>
           </div>
@@ -76,7 +76,7 @@ const App: React.FC = () => {
 
         {/* Hero Image */}
         <div className="w-full lg:w-1/2 flex justify-center lg:justify-end">
-          <div className="relative w-full aspect-square max-w-[500px] max-h-[500px] rounded-2xl overflow-hidden border border-border-dark shadow-2xl shadow-primary/10">
+          <div className="relative w-full aspect-square max-w-[500px] max-h-[500px] rounded-2xl overflow-hidden border border-white/10 shadow-2xl shadow-primary/10">
             <div className="absolute inset-0 bg-gradient-to-tr from-background-dark via-transparent to-primary/20 z-10"></div>
             <div
               className="w-full h-full bg-cover bg-center"
@@ -85,7 +85,7 @@ const App: React.FC = () => {
                   'url("https://lh3.googleusercontent.com/aida-public/AB6AXuDnP6Ob7MAr9C4qqmsx5EotM5idImjOtwUTAcTX5blD8WnPlfMb0VggXKgiOeptSJ9G3VzcP73uSVjtqgi1uPOcPAsM3PLhnUqlFBAn_yYHLNzlJ7cnp8JOJCSm1Bno6JbQ3_hDXe6_Vnyg-TZRz54vOEAGvpk2ekZTDh6lu-B5UYGKN-IJKdVYbSJdzb00rddXpnkjdVcJWOavUhgv-MRy1eE0gGEY8rUD2muuL9Q0XPDF-nNc_HXayHSuU2ThKItaE4mMLYd825II")',
               }}
             ></div>
-            <div className="absolute bottom-4 left-4 z-20 bg-background-dark/90 backdrop-blur border border-border-dark rounded p-3 font-mono text-xs text-primary">
+            <div className="absolute bottom-4 left-4 z-20 bg-background-dark/90 backdrop-blur border border-white/10 rounded p-3 font-mono text-xs text-primary">
               &gt; init_sequence()
               <br />
               &gt; loading_assets...
@@ -97,9 +97,9 @@ const App: React.FC = () => {
       </section>
 
       {/* Mission Section */}
-      <section className="bg-card-dark border-y border-border-dark py-20 text-center px-6 md:px-20 xl:px-40">
+      <section className="bg-card-dark border-y border-white/10 py-20 text-center px-6 md:px-20 xl:px-40">
         <span className="text-primary font-bold tracking-widest uppercase text-sm mb-4 inline-block">Our Mission</span>
-        <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-6 text-slate-900 dark:text-white">
+        <h2 className="text-3xl md:text-4xl font-bold leading-tight tracking-[-0.015em] mb-6 text-accent dark:text-white">
           Bridging the gap between legacy systems <br className="hidden md:block" /> and the future of tech.
         </h2>
         <p className="text-lg font-normal leading-relaxed text-slate-600 dark:text-gray-400 max-w-[720px] mx-auto">
@@ -109,9 +109,9 @@ const App: React.FC = () => {
 
       {/* Features Section */}
       <section className="px-6 md:px-20 xl:px-40 py-10 md:py-20 max-w-[1200px] mx-auto">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-border-dark pb-8 mb-10">
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-4 border-b border-white/10 pb-8 mb-10">
           <div className="flex flex-col gap-2">
-            <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight text-slate-900 dark:text-white">The Gen Z Approach</h2>
+            <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight text-accent dark:text-white">The Gen Z Approach</h2>
             <p className="text-base text-slate-600 dark:text-gray-400">Why clients choose to upgrade with us.</p>
           </div>
           <button className="text-primary font-bold hover:text-white transition-colors flex items-center gap-1 group">
@@ -136,12 +136,12 @@ const App: React.FC = () => {
               desc: "We live and breathe technology. From retro gaming to quantum computing, we are obsessed with what's next.",
             },
           ].map((feature) => (
-            <div key={feature.title} className="flex flex-col gap-5 rounded-xl border border-border-dark bg-card-dark p-6 hover:border-primary/50 transition-colors">
-              <div className="size-12 rounded-lg bg-background-dark border border-border-dark flex items-center justify-center group-hover:bg-primary/10 transition-colors">
+            <div key={feature.title} className="flex flex-col gap-5 rounded-xl  border-white/10 bg-card-dark p-6 hover:border-primary/50 transition-colors">
+              <div className="size-12 rounded-lg bg-background-dark border border-white/10 flex items-center justify-center group-hover:bg-primary/10 transition-colors">
                 <span className="material-symbols-outlined text-white group-hover:text-primary transition-colors">{feature.icon}</span>
               </div>
               <div className="flex flex-col gap-2">
-                <h3 className="text-xl font-bold leading-tight text-slate-900 dark:text-white">{feature.title}</h3>
+                <h3 className="text-xl font-bold leading-tight text-accent dark:text-white">{feature.title}</h3>
                 <p className="text-sm leading-relaxed text-slate-600 dark:text-gray-400">{feature.desc}</p>
               </div>
             </div>
@@ -150,15 +150,15 @@ const App: React.FC = () => {
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border-dark bg-background-dark py-12">
+      <footer className="border-t border-white/10 bg-background-dark py-12">
         <div className="px-6 md:px-20 xl:px-40 text-center flex flex-col items-center gap-6">
           <h2 className="text-white text-2xl font-bold">Ready to debug your business?</h2>
-          <button className="flex min-w-[140px] items-center justify-center h-12 px-8 bg-primary text-white text-base font-bold tracking-wide hover:bg-white hover:text-primary transition-all">
+          <button className="flex min-w-[140px] items-center justify-center h-12 px-8 bg-primary text-black text-base font-bold tracking-wide hover:bg-accent hover:text-black transition-all">
             Start a Project
           </button>
           <div className="flex gap-6 mt-4 text-gray-500">
             {["LinkedIn", "GitHub", "Twitter"].map((link) => (
-              <a key={link} href="#" className="hover:text-white transition-colors">{link}</a>
+              <a key={link} href="#" className="text-white hover:text-accent transition-colors">{link}</a>
             ))}
           </div>
           <p className="text-gray-600 text-sm mt-8">© 2023 Letus Consulting. All systems normal.</p>
@@ -170,7 +170,7 @@ const App: React.FC = () => {
         .blinking-cursor::after {
           content: '|';
           animation: blink 1s step-end infinite;
-          color: #1313ec;
+          color: #00F0FF;
         }
         @keyframes blink {
           0%, 100% { opacity: 1; }

@@ -1,17 +1,18 @@
+import ArrowForward from "../assets/icons/arrow_forward.svg?react";
+import DataArray from "../assets/icons/data_array.svg?react";
+import MenuIcon from "../assets/icons/menu_open.svg?react";
+import KeyboardArrowDown from "../assets/icons/keyboard_arrow_down.svg?react";
+import FormatQuote from "../assets/icons/format_quote.svg?react";
+import Terminal from "../assets/icons/terminal.svg?react";
 
-import Icon from "../components/Icon";
-
-const ConsultingPage = () => {
+const HomePage = () => {
   return (
     <div className="relative flex w-full flex-col group/design-root overflow-x-hidden">
       {/* HEADER */}
       <header className="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
         <div className="flex w-full max-w-[1400px] mx-auto items-center justify-between px-6 py-5 lg:px-12">
           <div className="flex items-center gap-2 cursor-pointer select-none group/logo">
-            <Icon
-              name="data_array"
-              className="w-6 h-6 text-accent group-hover:rotate-90 transition-transform duration-500"
-            />
+            <DataArray className="w-6 h-6 text-accent group-hover:rotate-90 transition-transform duration-500" />
             <h2 className="text-2xl font-bold tracking-tight text-white">
               Letus<span className="text-accent">_</span>
             </h2>
@@ -37,10 +38,7 @@ const ConsultingPage = () => {
           </div>
 
           <div className="md:hidden text-white">
-            <Icon
-              name="menu_open"
-              className="w-6 h-6 cursor-pointer hover:text-accent transition-colors"
-            />
+            <MenuIcon className="w-6 h-6 cursor-pointer hover:text-accent transition-colors" />
           </div>
         </div>
       </header>
@@ -78,10 +76,7 @@ const ConsultingPage = () => {
             <div className="flex flex-wrap items-center gap-6 mt-10">
               <button className="group flex items-center gap-4 px-8 py-4 bg-white text-black rounded-full text-sm font-bold tracking-wide transition-all hover:scale-105 hover:shadow-[0_0_30px_rgba(0,240,255,0.2)]">
                 <span>INITIALISE PROJECT</span>
-                <Icon
-                  name="arrow_forward"
-                  className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform"
-                />
+                <ArrowForward className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
               </button>
 
               <a
@@ -95,8 +90,10 @@ const ConsultingPage = () => {
         </div>
 
         <div className="absolute bottom-10 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 opacity-50 animate-bounce">
-          <span className="text-[10px] uppercase tracking-[0.2em] text-[#666]">Scroll</span>
-          <Icon name="keyboard_arrow_down" className="text-[#666]" />
+          <span className="text-[10px] uppercase tracking-[0.2em] text-[#666]">
+            Scroll
+          </span>
+          <KeyboardArrowDown className="text-[#666]" />
         </div>
       </section>
 
@@ -154,17 +151,18 @@ const ConsultingPage = () => {
                 >
                   <div className="flex justify-between items-start mb-6">
                     <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                      <Icon
-                        name={item.icon}
-                        className="text-white group-hover:text-accent transition-colors"
-                      />
+                      <Terminal className="text-white group-hover:text-accent transition-colors" />
                     </div>
                     <span className="font-mono text-xs text-[#444] group-hover:text-accent transition-colors">
                       {item.number}
                     </span>
                   </div>
-                  <h4 className="text-2xl font-bold mb-3 text-white">{item.title}</h4>
-                  <p className="text-[#888] text-sm leading-relaxed max-w-md">{item.description}</p>
+                  <h4 className="text-2xl font-bold mb-3 text-white">
+                    {item.title}
+                  </h4>
+                  <p className="text-[#888] text-sm leading-relaxed max-w-md">
+                    {item.description}
+                  </p>
                 </div>
               ))}
             </div>
@@ -209,7 +207,7 @@ const ConsultingPage = () => {
                 className="bg-[#0e0e0e] p-10 rounded-[2rem] border border-white/5 relative hover:border-white/10 transition-colors"
               >
                 <div className="absolute top-8 right-8 text-[#222]">
-                  <Icon name="format_quote" className="text-4xl" />
+                  <FormatQuote className="text-4xl" />
                 </div>
                 <p className="text-lg text-[#ccc] font-light leading-relaxed mb-8 relative z-10">
                   {item.feedback}
@@ -219,7 +217,9 @@ const ConsultingPage = () => {
                     {item.initials}
                   </div>
                   <div>
-                    <div className="font-bold text-white text-sm font-display">{item.name}</div>
+                    <div className="font-bold text-white text-sm font-display">
+                      {item.name}
+                    </div>
                     <div className="text-[#666] text-xs uppercase tracking-wider font-mono">
                       {item.role}
                     </div>
@@ -238,8 +238,12 @@ const ConsultingPage = () => {
               { number: "24/7", label: "Monitoring" },
             ].map((stat, idx) => (
               <div key={idx} className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">{stat.number}</div>
-                <div className="text-xs uppercase tracking-widest text-[#666]">{stat.label}</div>
+                <div className="text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-xs uppercase tracking-widest text-[#666]">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -251,7 +255,7 @@ const ConsultingPage = () => {
         <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col gap-4 text-center md:text-left">
             <div className="flex items-center gap-2 justify-center md:justify-start">
-              <Icon name="terminal" className="w-5 h-5 text-[#444]" />
+              <Terminal className="w-5 h-5 text-[#444]" />
               <span className="font-mono text-sm text-[#888]">
                 System Status: <span className="text-green-500">Normal</span>
               </span>
@@ -274,11 +278,13 @@ const ConsultingPage = () => {
             ))}
           </div>
 
-          <div className="text-[#444] text-xs font-mono">© 2024 Letus_ Inc.</div>
+          <div className="text-[#444] text-xs font-mono">
+            © 2024 Letus_ Inc.
+          </div>
         </div>
       </footer>
     </div>
   );
 };
 
-export default ConsultingPage;
+export default HomePage;

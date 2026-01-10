@@ -1,157 +1,245 @@
-// src/pages/CoreValues.tsx
-import React from "react";
+// =============================
+// CoreValuesPage.tsx
+// Wired to existing Header / Footer layout
+// Uses SVG icon pipeline + Framer Motion
+// Accent system: #206381 / #38BDF8
+// =============================
 
-// Define type for each value card
-interface ValueCardProps {
-  icon: string;
+import { motion } from "framer-motion";
+import Terminal from "../assets/icons/terminal.svg?react";
+import Shield from "../assets/icons/shield_lock.svg?react";
+import Code from "../assets/icons/code.svg?react";
+import Users from "../assets/icons/group.svg?react";
+
+// =============================
+// FeatureCard
+// =============================
+
+type FeatureCardProps = {
+  icon: React.FC<React.SVGProps<SVGSVGElement>>;
   title: string;
   description: string;
-}
+  span?: boolean;
+};
 
-const valueCards: ValueCardProps[] = [
-  {
-    icon: "pest_control",
-    title: "Debug Reality",
-    description:
-      "We don't just patch bugs; we re-architect solutions. Every problem is an opportunity to refactor the world around us. We prefer truth over comfort.",
-  },
-  {
-    icon: "call_merge",
-    title: "Open Source Minds",
-    description:
-      "Knowledge grows when it is shared. Transparency and collaboration are our primary dependencies.",
-  },
-  {
-    icon: "accessibility_new",
-    title: "User First",
-    description:
-      "Empathy is our primary dependency. We build for humans, not just machines. User interfaces are the window to the soul of our code.",
-  },
-];
-
-// Header component
-const Header: React.FC = () => {
+const FeatureCard = ({ icon: Icon, title, description, span }: FeatureCardProps) => {
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-border-dark bg-background-dark/80 backdrop-blur-md">
-      <div className="max-w-[1280px] mx-auto px-4 md:px-10 py-3 flex items-center justify-between">
-        <div className="flex items-center gap-3 text-white">
-          <div className="relative flex items-center justify-center text-primary drop-shadow-[0_0_8px_rgba(56,189,248,0.5)]">
-            <svg
-              className="w-8 h-8"
-              fill="none"
-              viewBox="0 0 48 48"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M13.8261 30.5736C16.7203 29.8826 20.2244 29.4783 24 29.4783C27.7756 29.4783 31.2797 29.8826 34.1739 30.5736C36.9144 31.2278 39.9967 32.7669 41.3563 33.8352L24.8486 7.36089C24.4571 6.73303 23.5429 6.73303 23.1514 7.36089L6.64374 33.8352C8.00331 32.7669 11.0856 31.2278 13.8261 30.5736Z"
-                fill="currentColor"
-              ></path>
-            </svg>
+    <motion.div
+      initial={{ opacity: 0, y: 20 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+      className={`p-6 rounded-2xl bg-card-dark border border-white/5 hover:border-accent/40 transition-all ${
+        span ? "sm:col-span-2" : ""
+      }`}
+    >
+      <Icon className="w-8 h-8 text-accent mb-4" />
+      <h4 className="text-white font-bold mb-2">{title}</h4>
+      <p className="text-sm text-[#888] leading-relaxed">{description}</p>
+    </motion.div>
+  );
+};
+
+// =============================
+// ValueBlock
+// =============================
+
+type ValueBlockProps = {
+  version: string;
+  title: string;
+  subtitle: string;
+  description: string;
+  reverse?: boolean;
+  features: FeatureCardProps[];
+};
+
+const ValueBlock = ({
+  version,
+  title,
+  subtitle,
+  description,
+  reverse,
+  features,
+}: ValueBlockProps) => {
+  return (
+    <section className="border-b border-white/5 last:border-none">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6, ease: "easeOut" }}
+        className={`max-w-[960px] mx-auto px-6 py-28 flex flex-col gap-16 ${
+          reverse ? "md:flex-row-reverse" : "md:flex-row"
+        }`}
+      >
+        {/* Text */}
+        <div className="flex-1">
+          <div className="inline-flex items-center gap-2 px-3 py-1 mb-4 rounded-full bg-card-dark border border-white/5">
+            <span className="w-2 h-2 rounded-full bg-accent animate-pulse" />
+            <span className="text-xs font-mono text-[#888]">{version}</span>
           </div>
-          <h2 className="text-lg font-bold text-white">Letus</h2>
+
+          <h3 className="text-3xl md:text-4xl font-bold mb-4 text-white">
+            {title}: <br />
+            <span>{subtitle}</span>
+          </h3>
+
+          <p className="text-[#888] leading-relaxed max-w-md">{description}</p>
         </div>
-        <nav className="hidden md:flex items-center gap-9">
-          <a href="#" className="text-white text-sm font-medium hover:text-primary transition-colors">
-            Home
-          </a>
-          <a href="#" className="text-white text-sm font-medium hover:text-primary transition-colors">
-            Services
-          </a>
-          <a href="#" className="text-primary text-sm font-bold">
-            Core Values
-          </a>
-          <a href="#" className="text-white text-sm font-medium hover:text-primary transition-colors">
-            Careers
-          </a>
-          <a href="#" className="text-white text-sm font-medium hover:text-primary transition-colors">
-            Contact
-          </a>
-        </nav>
-        <button className="flex min-w-[84px] h-10 px-4 items-center justify-center border border-primary/30 rounded-lg text-primary font-bold text-sm hover:bg-primary hover:text-black transition-all shadow-[0_0_10px_rgba(56,189,248,0.1)]">
-          Start a Session
-        </button>
-      </div>
-    </header>
-  );
-};
 
-// Hero Section
-const Hero: React.FC = () => {
-  return (
-    <section className="w-full flex justify-center py-5 px-4 md:px-40">
-      <div className="max-w-[960px] flex-1 text-center">
-        <h1 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-          &gt; defining_our_<span className="text-primary">principles</span>...<span className="animate-pulse">_</span>
-        </h1>
-        <p className="text-text-muted text-base md:text-lg mt-4">
-          Our operating system for success. Exploring the source code of our culture. We build resilient systems for a complex world.
-        </p>
-      </div>
+        {/* Features */}
+        <div className="flex-[1.5] grid grid-cols-1 sm:grid-cols-2 gap-6">
+          {features.map((feature, idx) => (
+            <FeatureCard key={idx} {...feature} />
+          ))}
+        </div>
+      </motion.div>
     </section>
   );
 };
 
-// Value Card
-const ValueCard: React.FC<ValueCardProps> = ({ icon, title, description }) => {
-  return (
-    <div className="flex flex-col gap-4 border border-border-dark bg-card-dark p-5 rounded-lg hover:border-primary/50 transition-colors">
-      <div className="text-primary text-3xl mb-2">
-        <span className="material-symbols-outlined">{icon}</span>
-      </div>
-      <h2 className="text-white text-base font-bold">{title}</h2>
-      <p className="text-text-muted text-sm">{description}</p>
-    </div>
-  );
-};
+// =============================
+// CoreValuesPage
+// =============================
 
-// Core Values Section
-const CoreValues: React.FC = () => {
+const CoreValuesPage = () => {
   return (
-    <section className="w-full flex justify-center py-10 px-4 md:px-40">
-      <div className="max-w-[960px] flex-1 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {valueCards.map((card, index) => (
-          <ValueCard
-            key={index}
-            icon={card.icon}
-            title={card.title}
-            description={card.description}
-          />
-        ))}
-      </div>
-    </section>
-  );
-};
+    <div className="w-full bg-background-dark text-white">
+      {/* HEADER is already global in layout */}
 
-// Call To Action
-const CTA: React.FC = () => {
-  return (
-    <section className="w-full flex justify-center py-10 px-4 md:px-40">
-      <div className="max-w-[960px] flex flex-col items-center gap-4 text-center">
-        <h2 className="text-2xl md:text-3xl font-bold text-white">Ready to push to production?</h2>
-        <p className="text-text-muted max-w-[500px] text-base">
-          Whether you want to join our team or start a project, let's write the future together.
-        </p>
-        <div className="flex gap-4 mt-4">
-          <button className="px-6 py-3 bg-primary text-black font-bold rounded-lg shadow-[0_0_20px_rgba(56,189,248,0.4)] hover:shadow-[0_0_30px_rgba(56,189,248,0.6)] transition-all">
-            Commit to Letus
-          </button>
-          <button className="px-6 py-3 border border-border-dark text-white rounded-lg hover:bg-border-dark transition-colors">
-            View Documentation
-          </button>
+      {/* HERO */}
+      <section className="py-32 px-6 text-center">
+        <motion.div
+          initial={{ opacity: 0, scale: 0.96 }}
+          animate={{ opacity: 1, scale: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          className="max-w-[960px] mx-auto rounded-2xl border border-white/5 bg-black/80 backdrop-blur-md p-14"
+        >
+          <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6">
+            &gt; defining_our_<span className="text-accent">principles</span>
+            <span className="animate-pulse">_</span>
+          </h1>
+          <p className="text-[#888] max-w-2xl mx-auto">
+            Our operating system for success. The source code of our culture.
+          </p>
+        </motion.div>
+      </section>
+
+      {/* SOURCE HEADER */}
+      <div className="max-w-[960px] mx-auto px-6">
+        <div className="border-b border-white/5 py-6 flex items-center gap-2 text-accent font-mono text-sm">
+          <Terminal className="w-4 h-4" />
+          // THE_SOURCE_CODE
         </div>
       </div>
-    </section>
-  );
-};
 
-// Page Component
-const CoreValuesPage: React.FC = () => {
-  return (
-    <div className="bg-background-dark text-white font-display min-h-screen">
-      <Header />
-      <Hero />
-      <CoreValues />
-      <CTA />
+      {/* VALUES */}
+      <ValueBlock
+        version="v1.0.0"
+        title="Value_01"
+        subtitle="Debug Reality"
+        description="We don't patch bugs — we re-architect systems. Truth over comfort."
+        features={[
+          {
+            icon: Code,
+            title: "Root Cause Analysis",
+            description: "We debug systems at their source, not the surface.",
+          },
+          {
+            icon: Shield,
+            title: "Clean Code",
+            description: "Simplicity scales. Complexity decays.",
+          },
+          {
+            icon: Terminal,
+            title: "Continuous Integration",
+            description: "Always shipping. Always improving.",
+            span: true,
+          },
+        ]}
+      />
+
+      <ValueBlock
+        version="v2.1.0"
+        title="Value_02"
+        subtitle="Open Source Minds"
+        reverse
+        description="Knowledge compounds when shared. Transparency is a core dependency."
+        features={[
+          {
+            icon: Users,
+            title: "Radical Transparency",
+            description: "No black boxes. No silos.",
+          },
+          {
+            icon: Code,
+            title: "Collaborative Commits",
+            description: "We build better together.",
+          },
+          {
+            icon: Terminal,
+            title: "Fork & Merge",
+            description: "Ideas evolve through collaboration.",
+            span: true,
+          },
+        ]}
+      />
+
+      <ValueBlock
+        version="v3.0.beta"
+        title="Value_03"
+        subtitle="User_01 First"
+        description="Empathy is our primary dependency. Humans before machines."
+        features={[
+          {
+            icon: Users,
+            title: "Human-Centric Design",
+            description: "Technology should feel invisible.",
+            span: true,
+          },
+          {
+            icon: Shield,
+            title: "UX Obsession",
+            description: "Friction is a bug.",
+          },
+          {
+            icon: Terminal,
+            title: "Feedback Loops",
+            description: "Input dictates output.",
+          },
+        ]}
+      />
+ {/* CTA */}
+      <section className="max-w-[960px] mx-auto px-6 py-32">
+        <div className="relative rounded-2xl bg-card-dark border bg-[#0e0e0e]   border-white/5  hover:border-white/10 transition-colors p-12 text-center overflow-hidden">
+          <div className="absolute inset-0 opacity-10 bg-[radial-gradient(#38BDF8_1px,transparent_1px)] bg-[size:20px_20px]" />
+
+          <div className="relative z-10">
+            <div className="w-12 h-12 mx-auto mb-4 rounded-full bg-accent/20 flex items-center justify-center">
+              <Terminal className="w-6 h-6 text-accent" />
+            </div>
+
+            <h3 className="text-2xl md:text-3xl font-bold mb-3">
+              Ready to push to production?
+            </h3>
+
+            <p className="text-[#888] max-w-lg mx-auto mb-8">
+              Whether you want to join our team or start a project, let’s write
+              the future together.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <button className="px-8 py-3 rounded-full bg-accent text-black font-bold hover:shadow-[0_0_30px_rgba(0,240,255,0.6)] transition">
+                Commit to Letus
+              </button>
+              <button className="px-8 py-3 rounded-full border border-border-dark text-white hover:bg-border-dark transition">
+                View Documentation
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+      {/* FOOTER is already global in layout */}
     </div>
   );
 };
