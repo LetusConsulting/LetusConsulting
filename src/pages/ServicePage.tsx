@@ -53,7 +53,7 @@ const services: Service[] = [
 
 const ServicesPage: React.FC = () => {
   return (
-    <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent-blue selection:text-black">
+    <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
       <Header />
 
       <main className="flex-grow flex flex-col items-center w-full">
@@ -61,11 +61,11 @@ const ServicesPage: React.FC = () => {
         <section className="w-full max-w-[1280px] px-4 md:px-10 lg:px-40 py-12 md:py-20">
           <div className="relative overflow-hidden rounded-xl bg-surface-dark border border-[#222]">
             <div className="absolute inset-0 opacity-20" style={{ backgroundImage: "radial-gradient(#333 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent-blue/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
             <div className="relative z-10 flex flex-col md:flex-row gap-8 p-8 md:p-16 items-end md:items-center justify-between min-h-[300px]">
               <div className="flex flex-col gap-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#333] bg-[#000] px-3 py-1 w-fit">
-                  <span className="material-symbols-outlined text-sm text-accent-blue animate-pulse">check_circle</span>
+                  <span className="material-symbols-outlined text-sm text-accent animate-pulse">check_circle</span>
                   <span className="text-xs font-mono text-gray-400">Modules Loaded: 5/5</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white text-glow">System<br />Capabilities.</h1>
@@ -80,34 +80,34 @@ const ServicesPage: React.FC = () => {
         {/* Services Section */}
         <section className="w-full max-w-[1000px] px-4 md:px-10 pb-20 flex flex-col gap-8">
           {services.map((service, idx) => (
-            <div key={idx} className="group relative rounded-lg border border-[#222] bg-surface-dark hover:border-accent-blue/50 transition-all duration-300 overflow-hidden">
+            <div key={idx} className="group relative rounded-lg border border-[#222] bg-surface-dark hover:border-accent/50 transition-all duration-300 overflow-hidden">
               <div className="bg-black border-b border-[#222] px-4 py-2 flex items-center gap-2">
                 <div className="flex gap-1.5">
                   <div className="w-2.5 h-2.5 rounded-full bg-red-500/20 border border-red-500/50"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-yellow-500/20 border border-yellow-500/50"></div>
                   <div className="w-2.5 h-2.5 rounded-full bg-green-500/20 border border-green-500/50"></div>
                 </div>
-                <div className="text-[10px] font-mono text-gray-600 ml-2 group-hover:text-accent-blue/70 transition-colors">{service.module}</div>
+                <div className="text-[10px] font-mono text-gray-600 ml-2 group-hover:text-accent/70 transition-colors">{service.module}</div>
               </div>
               <div className="p-6 md:p-8 flex flex-col md:flex-row gap-8">
                 <div className="flex-shrink-0 flex flex-col items-center md:items-start gap-4 w-full md:w-48">
-                  <div className="h-24 w-24 rounded-2xl bg-[#111] border border-[#222] flex items-center justify-center group-hover:bg-[#1a1a1a] group-hover:border-accent-blue/20 transition-all duration-300 shadow-inner">
-                    <span className="material-symbols-outlined text-5xl text-gray-400 group-hover:text-accent-blue transition-colors duration-300">{service.icon}</span>
+                  <div className="h-24 w-24 rounded-2xl bg-[#111] border border-[#222] flex items-center justify-center group-hover:bg-[#1a1a1a] group-hover:border-accent/20 transition-all duration-300 shadow-inner">
+                    <span className="material-symbols-outlined text-5xl text-gray-400 group-hover:text-accent transition-colors duration-300">{service.icon}</span>
                   </div>
                   <div className="font-mono text-xs text-gray-500 text-center md:text-left">
                     {service.stats.map((stat, i) => <span key={i} className="block mb-1">{stat}</span>)}
                   </div>
                 </div>
                 <div className="flex-1 w-full">
-                  <h3 className="text-3xl font-bold text-white mb-1 group-hover:text-accent-blue transition-colors duration-300">{service.title}</h3>
-                  <p className="text-accent-blue/70 font-mono text-sm mb-4">{service.subtitle}</p>
+                  <h3 className="text-3xl font-bold text-white mb-1 group-hover:text-accent transition-colors duration-300">{service.title}</h3>
+                 <p className="text-accent/70 font-mono text-sm mb-4">{service.subtitle}</p>
                   <p className="text-gray-400 mb-6 leading-relaxed">{service.description}</p>
                   <div className="bg-black rounded-lg border border-[#222] p-4 font-mono text-sm text-gray-500">
                     <p className="text-gray-600 mb-2 border-b border-[#222] pb-1 text-xs uppercase tracking-wider">Features</p>
                     <ul className="grid md:grid-cols-2 gap-2">
                       {service.features.map((f, i) => (
                         <li key={i} className="flex items-center gap-2 hover:text-gray-300 transition-colors">
-                          <span className="text-accent-blue">&gt;</span> {f}
+                          <span className="text-accent">&gt;</span> {f}
                         </li>
                       ))}
                     </ul>

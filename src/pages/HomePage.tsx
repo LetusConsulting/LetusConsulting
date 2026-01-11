@@ -4,44 +4,14 @@ import MenuIcon from "../assets/icons/menu_open.svg?react";
 import KeyboardArrowDown from "../assets/icons/keyboard_arrow_down.svg?react";
 import FormatQuote from "../assets/icons/format_quote.svg?react";
 import Terminal from "../assets/icons/terminal.svg?react";
+import Header from "../components/Header";
+import Footer from "../components/Footer";
 
 const HomePage = () => {
   return (
     <div className="relative flex w-full flex-col group/design-root overflow-x-hidden">
       {/* HEADER */}
-      <header className="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5 transition-all duration-300">
-        <div className="flex w-full max-w-[1400px] mx-auto items-center justify-between px-6 py-5 lg:px-12">
-          <div className="flex items-center gap-2 cursor-pointer select-none group/logo">
-            <DataArray className="w-6 h-6 text-accent group-hover:rotate-90 transition-transform duration-500" />
-            <h2 className="text-2xl font-bold tracking-tight text-white">
-              Letus<span className="text-accent">_</span>
-            </h2>
-          </div>
-
-          <div className="hidden md:flex items-center gap-12">
-            <nav className="flex gap-8">
-              {["/services", "/case_logs", "/about_kernel"].map((item) => (
-                <a
-                  key={item}
-                  href="#"
-                  className="text-sm font-medium text-[#888] hover:text-accent transition-colors relative group/link"
-                >
-                  {item}
-                  <span className="absolute -bottom-1 left-0 w-0 h-[1px] bg-accent transition-all group-hover/link:w-full" />
-                </a>
-              ))}
-            </nav>
-
-            <button className="border border-white/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white hover:border-accent hover:text-accent hover:shadow-[0_0_15px_rgba(0,240,255,0.15)] transition-all duration-300 bg-white/5">
-              Execute_
-            </button>
-          </div>
-
-          <div className="md:hidden text-white">
-            <MenuIcon className="w-6 h-6 cursor-pointer hover:text-accent transition-colors" />
-          </div>
-        </div>
-      </header>
+       <Header />
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden">
@@ -250,39 +220,103 @@ const HomePage = () => {
         </div>
       </section>
 
-      {/* FOOTER */}
-      <footer className="w-full border-t border-white/5 bg-black py-12">
-        <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
-          <div className="flex flex-col gap-4 text-center md:text-left">
-            <div className="flex items-center gap-2 justify-center md:justify-start">
-              <Terminal className="w-5 h-5 text-[#444]" />
-              <span className="font-mono text-sm text-[#888]">
-                System Status: <span className="text-green-500">Normal</span>
-              </span>
-            </div>
-            <div className="flex gap-6 text-[10px] uppercase font-mono tracking-widest text-[#666]">
-              <span>Encryption: AES-256</span>
-              <span>Region: Global</span>
-            </div>
+      {/* CORE Values */}
+
+      {/* CORE VALUES */}
+<section className="w-full px-6 lg:px-12 py-32 bg-background-dark relative overflow-hidden">
+  {/* Ambient Glow */}
+  <div className="absolute right-[-15%] top-1/3 w-[500px] h-[500px] bg-accent/5 rounded-full blur-[140px] pointer-events-none" />
+  <div className="absolute left-[-10%] bottom-1/4 w-[400px] h-[400px] bg-accent/5 rounded-full blur-[120px] pointer-events-none" />
+
+  <div className="max-w-[1200px] mx-auto relative z-10">
+    {/* Header */}
+    <div className="flex flex-col items-center text-center mb-20">
+      <div className="font-mono text-xs text-accent tracking-widest uppercase mb-4 flex items-center gap-2">
+        <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+        Operational Ethics
+        <span className="w-1.5 h-1.5 bg-accent rounded-full animate-pulse" />
+      </div>
+
+      <h3 className="text-4xl md:text-5xl font-bold tracking-tight text-white">
+        Core <span className="text-[#666]">Values</span>.
+      </h3>
+
+      <p className="mt-6 max-w-2xl text-[#888] font-light leading-relaxed">
+        Our systems run on more than code. These values define how we build,
+        collaborate, and create lasting impact.
+      </p>
+    </div>
+
+    {/* Values Grid */}
+    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+      {[
+        {
+          letter: "L",
+          title: "Leadership through Service",
+          description:
+            "We lead by empowering others, taking responsibility, and serving customers, partners, and communities with integrity.",
+        },
+        {
+          letter: "E",
+          title: "Excellence in Execution",
+          description:
+            "We commit to high standards, precision, and continuous improvement in everything we deliver.",
+        },
+        {
+          letter: "T",
+          title: "Trust & Transparency",
+          description:
+            "We build lasting relationships through honesty, accountability, and open communication.",
+        },
+        {
+          letter: "U",
+          title: "Unity & Collaboration",
+          description:
+            "We believe the best outcomes come from teamwork, mutual respect, and shared purpose.",
+        },
+        {
+          letter: "S",
+          title: "Sustainable Impact",
+          description:
+            "We focus on long-term value—creating solutions that are responsible, scalable, and beneficial for the future.",
+        },
+      ].map((value, idx) => (
+        <div
+          key={idx}
+          className="group relative p-10 rounded-[2rem] border border-white/5 bg-[#0a0a0a] transition-all duration-500 hover:border-accent/40 hover:shadow-[0_0_32px_rgba(34,197,94,0.12)]"
+        >
+          {/* Letter */}
+          <div className="absolute -top-6 -left-6 w-14 h-14 rounded-2xl bg-[#111] border border-white/10 flex items-center justify-center font-mono text-xl font-bold text-accent group-hover:scale-110 transition-transform">
+            {value.letter}
           </div>
 
-          <div className="flex gap-8">
-            {["GitHub", "LinkedIn", "Twitter"].map((item) => (
-              <a
-                key={item}
-                href="#"
-                className="text-[#666] hover:text-accent transition-colors text-sm font-mono"
-              >
-                [ {item} ]
-              </a>
-            ))}
-          </div>
+          {/* Content */}
+          <h4 className="text-2xl font-bold text-white mb-4">
+            {value.title}
+          </h4>
 
-          <div className="text-[#444] text-xs font-mono">
-            © 2024 Letus_ Inc.
-          </div>
+          <p className="text-[#888] leading-relaxed text-sm max-w-md">
+            {value.description}
+          </p>
+
+          {/* Subtle scan line */}
+          <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-gradient-to-r from-transparent via-accent/5 to-transparent" />
         </div>
-      </footer>
+      ))}
+    </div>
+
+    {/* Footer Line */}
+    <div className="mt-24 text-center">
+      <span className="font-mono text-xs uppercase tracking-[0.3em] text-[#555]">
+        Values Compiled · Version 1.0
+      </span>
+    </div>
+  </div>
+</section>
+
+
+      {/* FOOTER */}
+     <Footer/>
     </div>
   );
 };

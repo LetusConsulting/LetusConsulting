@@ -7,7 +7,7 @@ import { consultants } from "../data/consultants";
 
 const ConsultantsPage: React.FC = () => {
   return (
-    <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent-blue selection:text-black">
+    <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
       <Header />
       <main className="flex-grow flex flex-col items-center w-full">
         {/* Hero Section */}
@@ -20,7 +20,7 @@ const ConsultantsPage: React.FC = () => {
             <div className="relative z-10 flex flex-col md:flex-row gap-8 p-8 md:p-16 items-end md:items-center justify-between min-h-[400px]">
               <div className="flex flex-col gap-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1 w-fit">
-                  <span className="h-2 w-2 rounded-full bg-accent-blue animate-pulse"></span>
+                  <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
                   <span className="text-xs font-mono text-gray-400">System Status: ONLINE</span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white text-glow">

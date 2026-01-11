@@ -1,43 +1,43 @@
-import React from "react";
+import Terminal from "../assets/icons/terminal.svg?react";
 
-const Footer: React.FC = () => (
-  <footer className="w-full bg-[#050505] border-t border-[#222] py-12 px-6 md:px-12 font-mono text-sm">
-    <div className="max-w-[1280px] mx-auto grid md:grid-cols-2 gap-12">
-      <div className="bg-black p-6 rounded-lg border border-[#222] text-gray-400 font-mono text-xs md:text-sm shadow-2xl">
-        <div className="flex gap-2 mb-4 border-b border-[#222] pb-2">
-          <div className="w-3 h-3 rounded-full bg-red-500/50"></div>
-          <div className="w-3 h-3 rounded-full bg-yellow-500/50"></div>
-          <div className="w-3 h-3 rounded-full bg-green-500/50"></div>
-        </div>
-        <p className="mb-2"><span className="text-accent-blue">user@letus:~$</span> ./connect.sh</p>
-        <p className="mb-2">Initializing connection protocols...</p>
-        <p className="mb-2">Are you ready to optimize your infrastructure? [Y/n]</p>
-        <p className="mb-4"><span className="text-white animate-pulse">Y_</span></p>
-        <div className="mt-6 flex flex-col gap-2">
-          <a className="hover:text-accent-blue transition-colors" href="#">&gt; Email: hello@letus.consulting</a>
-          <a className="hover:text-accent-blue transition-colors" href="#">&gt; Twitter: @LetusCode</a>
-          <a className="hover:text-accent-blue transition-colors" href="#">&gt; GitHub: github.com/letus</a>
-        </div>
-      </div>
-      <div className="flex flex-col justify-between">
-        <div>
-          <div className="flex items-center gap-2 text-white mb-6">
-            <span className="material-symbols-outlined text-3xl text-accent-blue">terminal</span>
-            <h2 className="text-2xl font-bold font-display">Letus<span className="text-gray-500">_Consulting</span></h2>
+const Footer = () => {
+  return (
+    <footer className="w-full border-t border-white/5 bg-black py-12">
+      <div className="w-full max-w-[1400px] mx-auto px-6 lg:px-12 flex flex-col md:flex-row justify-between items-center gap-8">
+        {/* Status */}
+        <div className="flex flex-col gap-4 text-center md:text-left">
+          <div className="flex items-center gap-2 justify-center md:justify-start">
+            <Terminal className="w-5 h-5 text-[#444]" />
+            <span className="font-mono text-sm text-[#888]">
+              System Status: <span className="text-green-500">Normal</span>
+            </span>
           </div>
-          <p className="text-gray-500 max-w-sm mb-8 font-display">
-            We don't just write code. We architect the future of your business through rigorous engineering and data-driven strategy.
-          </p>
+          <div className="flex gap-6 text-[10px] uppercase font-mono tracking-widest text-[#666]">
+            <span>Encryption: AES-256</span>
+            <span>Region: Global</span>
+          </div>
         </div>
-        <div className="flex flex-wrap gap-8 text-gray-400">
-          <a className="hover:text-white" href="#">Privacy_Policy</a>
-          <a className="hover:text-white" href="#">Terms_of_Service</a>
-          <a className="hover:text-white" href="#">Sitemap.xml</a>
+
+        {/* Socials */}
+        <div className="flex gap-8">
+          {["GitHub", "LinkedIn", "Twitter"].map((item) => (
+            <a
+              key={item}
+              href="#"
+              className="text-[#666] hover:text-accent transition-colors text-sm font-mono"
+            >
+              [ {item} ]
+            </a>
+          ))}
         </div>
-        <p className="text-gray-600 mt-8">© 2024 Letus Consultants Inc. All systems normal.</p>
+
+        {/* Copyright */}
+        <div className="text-[#444] text-xs font-mono">
+          © 2026 Letus_ Inc.
+        </div>
       </div>
-    </div>
-  </footer>
-);
+    </footer>
+  );
+};
 
 export default Footer;

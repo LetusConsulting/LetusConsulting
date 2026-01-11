@@ -7,12 +7,16 @@ module.exports = {
   ],
   theme: {
     extend: {
+       boxShadow: {
+      'green-glow': '0 0 16px rgba(34,197,94,0.25)',
+      'green-glow-hover': '0 0 24px rgba(34,197,94,0.35)',
+    },
       colors: {
         primary: "#e6e6e6",
         "background-light": "#ffffff",
         "background-dark": "#050505",
         "terminal-gray": "#1a1a1a",
-        accent: "#00f0ff",
+         accent: "#22c55e",
         "accent-blue": "#206381",
       },
       fontFamily: {
