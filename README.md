@@ -1,6 +1,22 @@
 # React + TypeScript + Vite
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Letus consulting is built with Vite, Reactjs, TypeScript, and Tailwind CSS.
+
+To run locally: Ensure Node.js (v16+) and Git are installed. check your installation by running node -v, npm -v, and git --version in your terminal.
+
+Clone the repository, Open your terminal and run: git clone https://github.com/your-username/your-repo-name.git
+This will download the project files to your local machine.
+
+Navigate into the project folder: cd letus-consulting
+
+Now in your terminal run: npm install
+This will install all project dependencies
+
+Once dependencies are installed, Start the development server, in your terminal run: npm run dev
+This will launch the app locally on your browser
+
+happy viewing!!!
+
 
 Currently, two official plugins are available:
 
