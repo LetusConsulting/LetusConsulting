@@ -1,6 +1,4 @@
 import ArrowForward from "../assets/icons/arrow_forward.svg?react";
-import DataArray from "../assets/icons/data_array.svg?react";
-import MenuIcon from "../assets/icons/menu_open.svg?react";
 import KeyboardArrowDown from "../assets/icons/keyboard_arrow_down.svg?react";
 import FormatQuote from "../assets/icons/format_quote.svg?react";
 import Terminal from "../assets/icons/terminal.svg?react";
