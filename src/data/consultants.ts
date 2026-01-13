@@ -1,5 +1,6 @@
 // src/data/consultants.ts
 import type { Consultant } from "../types/consultant";
+import Samson from "../assets/icons/samson.jpeg";
 
 export const consultants: Consultant[] = [
   {
@@ -50,7 +51,7 @@ export const consultants: Consultant[] = [
     id: 3,
     name: "David Voss",
     title: "The Operator",
-    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuDP-EpP8lAirqfJzbf7OuYNtBOxdG_5bGkntSZ7UIEcCrc27bfLyJQOAZb-NRcAB3vvVv9uTxPU4vZPzfEwFjrOVBDzvTX_EVParfddD1U842brGQwrsYYFmykVCEwETXi9e5x5gpydy_IBUPGda8nhoP4A9tu2lRlapPodtwCQk8CRbigtUfLMKMmG79I3cCUjOXtxQQOm4TRLvbHJbQFKM55guVvCj3MlGthCuAfDScLvodRseZiGoCHa7WTXvohM6fzVoNhdpP6B",
+    avatar: Samson,
     verified: true,
     skills: [
       { name: "Cybersecurity", icon: "security" },
