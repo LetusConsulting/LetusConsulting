@@ -28,9 +28,9 @@ const App: React.FC = () => {
             <button className="flex items-center justify-center h-12 px-6 bg-primary hover:bg-accent text-black font-bold rounded-lg shadow-lg shadow-primary/25">
               View our work
             </button>
-            <button className="flex items-center justify-center h-12 px-6 bg-transparent border border-white/10 hover:border-primary/50 text-accent dark:text-white font-bold rounded-lg hover:bg-card-dark transition-all">
+            {/* <button className="flex items-center justify-center h-12 px-6 bg-transparent border border-white/10 hover:border-primary/50 text-accent dark:text-white font-bold rounded-lg hover:bg-card-dark transition-all">
               Our Stack
-            </button>
+            </button> */}
           </div>
         </div>
 
