@@ -65,6 +65,25 @@ const HomePage = () => {
         </div>
       </section>
 
+         {/* Stats */}
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 border-y border-white/5 py-12">
+            {[
+              { number: "99.9%", label: "Uptime" },
+              { number: "<12ms", label: "Latency" },
+              { number: "256+", label: "Projects" },
+              { number: "24/7", label: "Monitoring" },
+            ].map((stat, idx) => (
+              <div key={idx} className="text-center">
+                <div className="text-4xl font-bold text-white mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-xs uppercase tracking-widest text-[#666]">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+
       {/* PROTOCOLS SECTION */}
       <section
         className="w-full px-6 lg:px-12 py-32 border-t border-white/5 bg-background-dark relative"
@@ -197,24 +216,7 @@ const HomePage = () => {
             ))}
           </div>
 
-          {/* Stats */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 mt-20 border-y border-white/5 py-12">
-            {[
-              { number: "99.9%", label: "Uptime" },
-              { number: "<12ms", label: "Latency" },
-              { number: "256+", label: "Projects" },
-              { number: "24/7", label: "Monitoring" },
-            ].map((stat, idx) => (
-              <div key={idx} className="text-center">
-                <div className="text-4xl font-bold text-white mb-2">
-                  {stat.number}
-                </div>
-                <div className="text-xs uppercase tracking-widest text-[#666]">
-                  {stat.label}
-                </div>
-              </div>
-            ))}
-          </div>
+       
         </div>
       </section>
 
