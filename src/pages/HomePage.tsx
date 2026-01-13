@@ -254,29 +254,31 @@ const HomePage = () => {
           description:
             "We lead by empowering others, taking responsibility, and serving customers, partners, and communities with integrity.",
         },
-        {
-          letter: "E",
-          title: "Excellence in Execution",
-          description:
-            "We commit to high standards, precision, and continuous improvement in everything we deliver.",
-        },
-        {
-          letter: "T",
-          title: "Trust & Transparency",
-          description:
-            "We build lasting relationships through honesty, accountability, and open communication.",
-        },
-        {
+         {
           letter: "U",
           title: "Unity & Collaboration",
           description:
             "We believe the best outcomes come from teamwork, mutual respect, and shared purpose.",
         },
         {
+          letter: "E",
+          title: "Excellence in Execution",
+          description:
+            "We commit to high standards, precision, and continuous improvement in everything we deliver.",
+        },
+       
+       
+        {
           letter: "S",
           title: "Sustainable Impact",
           description:
             "We focus on long-term value—creating solutions that are responsible, scalable, and beneficial for the future.",
+        },
+         {
+          letter: "T",
+          title: "Trust & Transparency",
+          description:
+            "We build lasting relationships through honesty, accountability, and open communication.",
         },
       ].map((value, idx) => (
         <div

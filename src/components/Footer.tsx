@@ -33,7 +33,7 @@ const Footer = () => {
 
         {/* Copyright */}
         <div className="text-[#444] text-xs font-mono">
-          © 2026 Letus_ Inc.
+          © 2026 Letus Limited.
         </div>
       </div>
     </footer>

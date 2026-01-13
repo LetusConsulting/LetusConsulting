@@ -74,9 +74,9 @@ const App: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight text-accent dark:text-white">The Gen Z Approach</h2>
             <p className="text-base text-slate-600 dark:text-gray-400">Why clients choose to upgrade with us.</p>
           </div>
-          <button className="text-primary font-bold hover:text-white hover:border-accent transition-colors flex items-center gap-1 group">
+          {/* <button className="text-primary font-bold hover:text-white hover:border-accent transition-colors flex items-center gap-1 group">
             See our culture <span className="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform">arrow_forward</span>
-          </button>
+          </button> */}
         </div>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
           {[

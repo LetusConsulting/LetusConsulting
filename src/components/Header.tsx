@@ -1,69 +1,78 @@
 import { NavLink } from "react-router-dom";
 import DataArray from "../assets/icons/data_array.svg?react";
 import MenuIcon from "../assets/icons/menu_open.svg?react";
+import MobileMenu from "./MobileMenu";
+import { useEffect, useState } from "react";
+import Letus from "../assets/icons/letus_logo.png?react";
 
-const navItems = [
-  { label: "/Services", path: "/services" },
-  { label: "/Portfolio", path: "/consultantportfolio" },
-  { label: "/About_Us", path: "/about_us" },
-  { label: "/Contact_Us", path: "/contact_us" },
-];
+import { navigation } from "../data/navigation";
+
+const navItems = navigation.sort((a, b) => a.order - b.order);
+
 
 const Header = () => {
+  const [scrolled, setScrolled] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 30);
+    window.addEventListener("scroll", onScroll);
+    return () => window.removeEventListener("scroll", onScroll);
+  }, []);
+
   return (
-    <header className="fixed top-0 left-0 w-full z-50 bg-background-dark/80 backdrop-blur-md border-b border-white/5">
-      <div className="flex w-full max-w-[1400px] mx-auto items-center justify-between px-6 py-5 lg:px-12">
-        {/* Logo */}
-        <NavLink
-          to="/"
-          className="flex items-center gap-2 cursor-pointer select-none group"
-        >
-          <DataArray className="w-6 h-6 text-accent group-hover:rotate-90 transition-transform duration-500" />
-          <h2 className="text-2xl font-bold tracking-tight text-white">
-            Letus<span className="text-accent">_</span>
-          </h2>
-        </NavLink>
-
-        {/* Desktop Nav */}
-        <div className="hidden md:flex items-center gap-12">
-        <nav className="flex gap-8">
-  {navItems.map((item) => (
-    <NavLink key={item.path} to={item.path}>
-      {({ isActive }) => (
-        <span
-          className={`relative text-sm font-medium transition-colors group cursor-pointer
-            ${
-              isActive
-                ? "text-accent"
-                : "text-[#888] hover:text-accent"
-            }`}
-        >
-          {item.label}
-          <span
-            className={`absolute -bottom-1 left-0 h-[1px] bg-accent transition-all
-              ${isActive ? "w-full" : "w-0 group-hover:w-full"}`}
-          />
-        </span>
-      )}
-    </NavLink>
-  ))}
-</nav>
-
-
-          <NavLink
-            to="/contact_us"
-            className="border border-white/10 px-6 py-2 rounded-full text-xs font-bold uppercase tracking-wider text-white hover:border-accent hover:text-accent hover:shadow-[0_0_15px_rgba(0,240,255,0.15)] transition-all bg-white/5"
-          >
-            Let’s Talk_
+    <>
+      <header
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300
+        ${
+          scrolled
+            ? "bg-black/90 backdrop-blur border-b border-white/10 py-3"
+            : "bg-background-dark/80 backdrop-blur-md py-5"
+        }`}
+      >
+        <div className="flex max-w-[1400px] mx-auto items-center justify-between px-6 lg:px-12">
+          <NavLink to="/" className="flex items-center gap-2">
+            <DataArray className="w-6 h-6 text-accent" />
+            <h2 className="text-xl font-bold text-white">
+             {/* <Letus className="w-12 h-12" /> */}
+             <img src="../assets/icons/letus_logo.png" alt="Letus Logo" className="w-24 h-auto" />
+          
+            </h2>
           </NavLink>
-        </div>
 
-        {/* Mobile */}
-        <div className="md:hidden text-white">
-          <MenuIcon className="w-6 h-6 cursor-pointer hover:text-accent transition-colors" />
+          {/* Desktop */}
+          <nav className="hidden md:flex gap-8">
+            {navItems.map((item) => (
+              <NavLink
+                key={item.path}
+                to={item.path}
+                className={({ isActive }) =>
+                  isActive
+                    ? "text-accent font-medium"
+                    : "text-[#888] hover:text-accent transition-colors"
+                }
+              >
+                {item.label}
+              </NavLink>
+            ))}
+          </nav>
+
+          {/* Mobile */}
+          <button
+            onClick={() => setMenuOpen(true)}
+            className="md:hidden text-white"
+          >
+            <MenuIcon className="w-6 h-6" />
+          </button>
         </div>
-      </div>
-    </header>
+      </header>
+
+      <MobileMenu
+        isOpen={menuOpen}
+        onClose={() => setMenuOpen(false)}
+        navItems={navItems}
+      />
+    </>
   );
 };
 
