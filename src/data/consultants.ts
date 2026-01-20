@@ -27,7 +27,8 @@ export const consultants: Consultant[] = [
       Clients: "120",
       Projects: "45",
       Rating: "4.9/5"
-    }
+    },
+    description: ""
   },
   {
     id: 2,
@@ -49,7 +50,8 @@ export const consultants: Consultant[] = [
       Clients: "85",
       Projects: "30",
       Rating: "4.8/5"
-    }
+    },
+    description: ""
   },
   {
     id: 3,
@@ -71,6 +73,7 @@ export const consultants: Consultant[] = [
       Clients: "100",
       Projects: "50",
       Rating: "4.9/5"
-    }
+    },
+    description: ""
   }
 ];

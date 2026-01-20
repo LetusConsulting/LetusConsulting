@@ -1,5 +1,4 @@
 import { NavLink } from "react-router-dom";
-import DataArray from "../assets/icons/data_array.svg?react";
 import MenuIcon from "../assets/icons/menu_open.svg?react";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
@@ -8,7 +7,6 @@ import Letus from "../assets/icons/letus_logo.png";
 import { navigation } from "../data/navigation";
 
 const navItems = navigation.sort((a, b) => a.order - b.order);
-
 
 const Header = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -27,16 +25,15 @@ const Header = () => {
         ${
           scrolled
             ? "bg-black/90 backdrop-blur border-b border-white/10 py-3"
-            : "bg-background-dark/80 backdrop-blur-md py-5"
+            : "bg-background-dark/80 backdrop-blur-md py-5 "
         }`}
       >
         <div className="flex max-w-[1400px] mx-auto items-center justify-between px-6 lg:px-12">
           <NavLink to="/" className="flex items-center gap-2">
             {/* <DataArray className="w-6 h-6 text-accent" /> */}
             <h2 className="text-xl font-bold text-white">
-             {/* <Letus className="w-12 h-12" /> */}
-             <img src={Letus} alt="Letus Logo" className="w-24 h-auto" />
-          
+              {/* <Letus className="w-12 h-12" /> */}
+              <img src={Letus} alt="Letus Logo" className="w-24 h-auto" />
             </h2>
           </NavLink>
 

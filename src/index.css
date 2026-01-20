@@ -93,12 +93,12 @@ button:focus-visible {
 }
 
 ::-webkit-scrollbar-thumb {
-  background: #00f0ff55;
+  background:  #22c55eaa;
   border-radius: 4px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #00f0ffaa;
+  background: #22c55e;
 }
 
 
