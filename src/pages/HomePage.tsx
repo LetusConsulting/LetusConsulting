@@ -47,12 +47,7 @@ const HomePage = () => {
                 <ArrowForward className="w-4 h-4 text-black group-hover:translate-x-1 transition-transform" />
               </button>
 
-              <a
-                className="group flex items-center gap-2 text-sm font-mono text-[#888] hover:text-accent transition-colors ml-4"
-                href="#protocols"
-              >
-                <span>[ View Protocols ]</span>
-              </a>
+            
             </div>
           </div>
         </div>
