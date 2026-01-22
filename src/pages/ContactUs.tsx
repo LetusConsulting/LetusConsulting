@@ -9,14 +9,16 @@ const ContactUs: React.FC = () => {
     subject: "Consulting Inquiry",
     message: "",
   });
-  
+
   const [status, setStatus] = useState<{
     type: "idle" | "loading" | "success" | "error";
     message: string;
   }>({ type: "idle", message: "IDLE" });
 
   const handleInputChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
+    e: React.ChangeEvent<
+      HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement
+    >,
   ) => {
     const { name, value } = e.target;
     setFormData((prev) => ({ ...prev, [name]: value }));
@@ -24,7 +26,7 @@ const ContactUs: React.FC = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    
+
     // Validation
     if (!formData.name || !formData.email || !formData.message) {
       setStatus({ type: "error", message: "All fields are required" });
@@ -35,9 +37,9 @@ const ContactUs: React.FC = () => {
 
     try {
       // Replace with your actual backend URL
-      const API_URL =  import.meta.env.VITE_API_URL || "http://localhost:3001";
-     // process.env.REACT_APP_API_URL || "http://localhost:3001";
-      
+      const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3001";
+      // process.env.REACT_APP_API_URL || "http://localhost:3001";
+
       const response = await fetch(`${API_URL}/api/contact`, {
         method: "POST",
         headers: {
@@ -57,7 +59,7 @@ const ContactUs: React.FC = () => {
           subject: "Consulting Inquiry",
           message: "",
         });
-        
+
         // Reset status after 5 seconds
         setTimeout(() => {
           setStatus({ type: "idle", message: "IDLE" });
@@ -67,11 +69,11 @@ const ContactUs: React.FC = () => {
       }
     } catch (error) {
       console.error("Error:", error);
-      setStatus({ 
-        type: "error", 
-        message: error instanceof Error ? error.message : "FAILED TO SEND" 
+      setStatus({
+        type: "error",
+        message: error instanceof Error ? error.message : "FAILED TO SEND",
       });
-      
+
       // Reset error after 5 seconds
       setTimeout(() => {
         setStatus({ type: "idle", message: "IDLE" });
@@ -106,15 +108,13 @@ const ContactUs: React.FC = () => {
               </span>
             </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-              Let's debug your <br />
+              We transform challenges into <br />
               <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
-                business problems.
+                results.
               </span>
             </h2>
             <p className="text-lg text-slate-400 max-w-md">
-              We speak code, but we listen in human. Drop a line below to
-              initialize a connection or ping us directly via the standard
-              protocols.
+              Reach out to start the conversation, Letus make IT happen.
             </p>
           </div>
 
@@ -129,8 +129,8 @@ const ContactUs: React.FC = () => {
             <ContactCard
               icon="call"
               label="VOIP//Connect"
-              content="+1 (555) 010-9988"
-              href="tel:+15550109988"
+              content="+2347032844735"
+              href="tel:+2347032844735"
             />
             <ContactCard
               icon="terminal"
@@ -164,10 +164,13 @@ const ContactUs: React.FC = () => {
               </p>
             </div>
 
-            <form onSubmit={handleSubmit} className="flex flex-col gap-5 relative z-10">
+            <form
+              onSubmit={handleSubmit}
+              className="flex flex-col gap-5 relative z-10"
+            >
               <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <FormInput
-                  label="var Name"
+                  label="Name"
                   name="name"
                   type="text"
                   placeholder="John Doe"
@@ -176,7 +179,7 @@ const ContactUs: React.FC = () => {
                   required
                 />
                 <FormInput
-                  label="var Email"
+                  label="Email"
                   name="email"
                   type="email"
                   placeholder="john@example.com"
@@ -191,7 +194,7 @@ const ContactUs: React.FC = () => {
                   className="text-xs font-mono text-primary uppercase tracking-wider"
                   htmlFor="subject"
                 >
-                  enum Subject
+                  Subject
                 </label>
                 <div className="relative">
                   <select
@@ -219,7 +222,7 @@ const ContactUs: React.FC = () => {
                   className="text-xs font-mono text-primary uppercase tracking-wider"
                   htmlFor="message"
                 >
-                  string Message
+                  Message
                 </label>
                 <textarea
                   className="bg-[#0a0a16] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block w-full p-3 placeholder-slate-600 transition-all resize-none"
@@ -240,8 +243,8 @@ const ContactUs: React.FC = () => {
                     status.type === "success"
                       ? "bg-green-500/10 border border-green-500/30 text-green-400"
                       : status.type === "error"
-                      ? " text-red-400"
-                      : "text-accent/50"
+                        ? " text-red-400"
+                        : "text-accent/50"
                   }`}
                 >
                   {status.message}
@@ -254,7 +257,9 @@ const ContactUs: React.FC = () => {
                   type="submit"
                   disabled={status.type === "loading"}
                 >
-                  <span>{status.type === "loading" ? "Sending..." : "Execute"}</span>
+                  <span>
+                    {status.type === "loading" ? "Sending..." : "Execute"}
+                  </span>
                   {status.type !== "loading" && (
                     <span className="material-symbols-outlined group-hover:translate-x-1 transition-transform text-sm">
                       arrow_forward_ios
@@ -267,7 +272,7 @@ const ContactUs: React.FC = () => {
             {/* Terminal Footer */}
             <div className="mt-2 border-t border-accent/30 pt-4 flex justify-between items-center text-[10px] text-accent/50 font-mono">
               <span>STATUS: {status.message}</span>
-              <span>v2.0.4</span>
+              <span>LETUS</span>
             </div>
           </div>
         </div>

@@ -4,7 +4,6 @@ import Footer from "../components/Footer";
 import ConsultantCard from "../components/ConsultantCard";
 import { consultants } from "../data/consultants";
 
-
 const ConsultantsPage: React.FC = () => {
   return (
     <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
@@ -15,19 +14,26 @@ const ConsultantsPage: React.FC = () => {
           <div className="relative overflow-hidden rounded-xl bg-surface-dark border border-white/10">
             <div
               className="absolute inset-0 opacity-20"
-              style={{ backgroundImage: "radial-gradient(#333 1px, transparent 1px)", backgroundSize: "24px 24px" }}
+              style={{
+                backgroundImage: "radial-gradient(#333 1px, transparent 1px)",
+                backgroundSize: "24px 24px",
+              }}
             />
             <div className="relative z-10 flex flex-col md:flex-row gap-8 p-8 md:p-16 items-end md:items-center justify-between min-h-[400px]">
               <div className="flex flex-col gap-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1 w-fit">
                   <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
-                  <span className="text-xs font-mono text-gray-400">System Status: ONLINE</span>
+                  <span className="text-xs font-mono text-gray-400">
+                    System Status: ONLINE
+                  </span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white text-glow">
-                  Meet the<br />Kernel.
+                  Meet the
+                  <br />
+                  Kernel.
                 </h1>
                 <p className="text-lg text-gray-400 max-w-lg">
-                  Principal Consultants deploying expertise. We bridge the gap between legacy systems and future-proof architecture.
+                  Principal Consultants deploying expertise.
                 </p>
               </div>
             </div>

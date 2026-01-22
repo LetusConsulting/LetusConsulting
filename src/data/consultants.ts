@@ -7,8 +7,31 @@ import Samson from "../assets/icons/Samson.jpeg";
 
 
 export const consultants: Consultant[] = [
-  {
+   {
     id: 1,
+    name: "Samson Idowu",
+    title: "The Operator",
+    avatar: Samson,
+    verified: true,
+    skills: [
+      { name: "Cybersecurity", icon: "security" },
+      { name: "Networking", icon: "router" },
+      { name: "Compliance", icon: "rule" },
+      { name: "Bash", icon: "terminal" }
+    ],
+    projects: [
+      { title: "Global SecOps Implementation", description: "Established 24/7 SOC for multinational retailer." },
+      { title: "Ransomware Recovery", description: "Restored critical infrastructure in 4 hours post-attack." }
+    ],
+    metrics: {
+      Clients: "100",
+      Projects: "50",
+      Rating: "4.9/5"
+    },
+    description: ""
+  },
+  {
+    id: 2,
     name: "Alex Mercer",
     title: "The Architect",
     avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBW3jJsyLQsKM7Mettau_VAT_ntSm7i8mNzErTvpvXDOsx_k26yqfPsuExpZKINxDY8LuKbtez7n8EZSlTpDMwL5KwNUv5R95jo8YGq2c4FWhjl2xV-bVzjbP3faGiYSous4ZNEW7w3N-_zUZIiLOlurDhkTUv8lTkelVSh_X2jbOSg3Z9FREnLP04iq3w_guXDxumDXHDw3aPllkR0D-uFplwLO6eITzZOu5XQ_wuBZPGaAIGOcR_t313mpntKeCp4GY-om54pJNVm",
@@ -31,7 +54,7 @@ export const consultants: Consultant[] = [
     description: ""
   },
   {
-    id: 2,
+    id: 3,
     name: "Sarah Chen",
     title: "The Alchemist",
     avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkD2WiKx2i0YBKycyoh1__A0iDWy5SwhzAMXcVTY-Xffp58_x0V4BBiDSkzFUs8Sd9xv2M9n-HjOVUoPnewLJDGs5T3Bo2UU2OxpcsvkrUrMUu-n0KEQEf4r9B3q5GQAAag0E5pn4poLLnng-ekXYX_cbJQ6j9n-HyA4lEe1Oty4Yk_svsuGKnUhBGAIWw3kQsV65HDdI0ufCqeG3uC1mqn2PFQ_1ducQ2xjAdkJ8Dc3pBVlEMYBp2TBt3UIrjaXH8tkcMpwChMxcG",
@@ -53,27 +76,5 @@ export const consultants: Consultant[] = [
     },
     description: ""
   },
-  {
-    id: 3,
-    name: "Samson Idowu",
-    title: "The Operator",
-    avatar: Samson,
-    verified: true,
-    skills: [
-      { name: "Cybersecurity", icon: "security" },
-      { name: "Networking", icon: "router" },
-      { name: "Compliance", icon: "rule" },
-      { name: "Bash", icon: "terminal" }
-    ],
-    projects: [
-      { title: "Global SecOps Implementation", description: "Established 24/7 SOC for multinational retailer." },
-      { title: "Ransomware Recovery", description: "Restored critical infrastructure in 4 hours post-attack." }
-    ],
-    metrics: {
-      Clients: "100",
-      Projects: "50",
-      Rating: "4.9/5"
-    },
-    description: ""
-  }
+ 
 ];
