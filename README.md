@@ -12,7 +12,7 @@ This will download the project files to your local machine.
 
 Navigate into the project folder: 
 ```
-cd letus-consulting
+cd LetusConsulting 
 ```
 Now in your terminal run: 
 ```
