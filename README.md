@@ -6,7 +6,7 @@ To run locally: Ensure Node.js (v16+) and Git are installed. check your installa
 
 Clone the repository, Open your terminal and run: 
 ```
-git clone https://github.com/your-username/your-repo-name.git
+git clone https://github.com/LetusConsulting/LetusConsulting.git
 ```
 This will download the project files to your local machine.
 
