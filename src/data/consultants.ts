@@ -55,7 +55,7 @@ export const consultants: Consultant[] = [
   },
   {
     id: 3,
-    name: "Sarah Chen",
+    name: "Fatima Modupe Bello",
     title: "The Alchemist",
     avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkD2WiKx2i0YBKycyoh1__A0iDWy5SwhzAMXcVTY-Xffp58_x0V4BBiDSkzFUs8Sd9xv2M9n-HjOVUoPnewLJDGs5T3Bo2UU2OxpcsvkrUrMUu-n0KEQEf4r9B3q5GQAAag0E5pn4poLLnng-ekXYX_cbJQ6j9n-HyA4lEe1Oty4Yk_svsuGKnUhBGAIWw3kQsV65HDdI0ufCqeG3uC1mqn2PFQ_1ducQ2xjAdkJ8Dc3pBVlEMYBp2TBt3UIrjaXH8tkcMpwChMxcG",
     verified: true,
