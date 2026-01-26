@@ -84,7 +84,14 @@ const services: Service[] = [
 const ServicesPage: React.FC = () => {
   return (
     <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
-      <Header />
+      <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
+       <Header />
 
       <main className="flex-grow flex flex-col items-center w-full">
         {/* Hero Section */}
@@ -97,7 +104,7 @@ const ServicesPage: React.FC = () => {
                 backgroundSize: "24px 24px",
               }}
             />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/10 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
             <div className="relative z-10 flex flex-col md:flex-row gap-8 p-8 md:p-16 items-end md:items-center justify-between min-h-[300px]">
               <div className="flex flex-col gap-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#333] bg-[#000] px-3 py-1 w-fit">

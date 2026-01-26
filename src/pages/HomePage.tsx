@@ -22,37 +22,40 @@ const ICONS: Record<string, React.FC<React.SVGProps<SVGSVGElement>>> = {
 const HomePage = () => {
   return (
     <div className="relative flex w-full flex-col group/design-root overflow-x-hidden">
-      {/* HEADER */}
+       <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      ></div> 
+       {/* HEADER */}
       <Header />
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-1/4 right-[10%] w-[400px] h-[400px] bg-accent/5 rounded-full pointer-events-none blur-[120px] animate-pulse" />
-        <div className="absolute bottom-1/4 left-[5%] w-[250px] h-[250px] bg-accent/5 rounded-full pointer-events-none blur-[90px]" />
+        <div className="absolute top-1/4 right-[10%] w-[400px] h-[400px] bg-accent/20 rounded-full pointer-events-none blur-[190px] " />
+        <div className="absolute bottom-1/4 left-[5%] w-[250px] h-[250px]  rounded-full pointer-events-none blur-[90px]" />
 
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col justify-center h-full z-10">
           <div className="flex flex-col gap-8 items-start max-w-4xl">
             <div className="flex items-center gap-3 mb-4">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_8px_rgba(0,240,255,0.8)]" />
-              <div className="font-mono text-xs text-accent tracking-widest uppercase">
-                System Online: v2.4.0
+              <div className="font-mono text-xs text-accent tracking-widest ">
+               System Status: Online
               </div>
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold leading-[0.9] tracking-tighter text-white mix-blend-difference">
-              LETUS
-              <br />
-              DO
-              <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
-                TECHNOLOGY
+             LETUS DO IT
+              <span className="pl-2  text-transparent bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
+               
               </span>
               <span className="text-accent animate-blink">.</span>
             </h1>
 
             <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt-6 pl-6 border-l-2 border-accent/30 font-body">
-              We handle the tech, so you can handle business. Clean code, robust
-              security, infinite scalability.
+              We handle the tech, so you can handle business.
             </p>
 
             <div className="flex flex-wrap items-center gap-6 mt-10">

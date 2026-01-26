@@ -9,7 +9,7 @@ const Footer = () => {
           <div className="flex items-center gap-2 justify-center md:justify-start">
             <Terminal className="w-5 h-5 text-[#444]" />
             <span className="font-mono text-sm text-[#888]">
-              System Status: <span className="text-green-500">Normal</span>
+              System: <span className="text-green-500">Normal</span>
             </span>
           </div>
           <div className="flex gap-6 text-[10px] uppercase font-mono tracking-widest text-[#666]">

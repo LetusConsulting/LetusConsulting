@@ -101,17 +101,17 @@ const ContactUs: React.FC = () => {
         <div className="flex-1 flex flex-col gap-10">
           {/* Heading */}
           <div className="flex flex-col gap-4">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-[#111122] border border-accent/30 w-fit">
-              <span className="block size-2 rounded-full bg-green-500 animate-pulse"></span>
-              <span className="text-xs font-mono text-slate-400">
-                System Status: Online
-              </span>
-            </div>
+            <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1 w-fit">
+                  <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
+                  <span className="text-xs font-mono text-gray-400">
+                    System Status: Online
+                  </span>
+                </div>
             <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold leading-[1.1] tracking-tight">
-              We transform challenges into <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
-                results.
-              </span>
+              We transform challenges into   results.<br />
+              {/* <span className="text-transparent bg-clip-text bg-gradient-to-r from-white to-slate-500">
+              
+              </span> */}
             </h2>
             <p className="text-lg text-slate-400 max-w-md">
               Reach out to start the conversation, Letus make IT happen.
@@ -149,7 +149,7 @@ const ContactUs: React.FC = () => {
 
         {/* Right Column: Form */}
         <div className="flex-1">
-          <div className="h-full bg-[#111122]/50 border border-accent/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 flex flex-col gap-6 shadow-2xl relative overflow-hidden">
+          <div className="h-full bg-[#22c55e14]/5 border border-accent/30 backdrop-blur-sm rounded-2xl p-6 md:p-8 flex flex-col gap-6 shadow-2xl relative overflow-hidden">
             {/* Decoration */}
             <div className="absolute -top-10 -right-10 text-[10rem] text-primary/5 font-bold leading-none pointer-events-none select-none">
               {"{}"}
@@ -198,7 +198,7 @@ const ContactUs: React.FC = () => {
                 </label>
                 <div className="relative">
                   <select
-                    className="bg-[#0a0a16] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block w-full p-3 appearance-none transition-all"
+                    className="bg-[#000] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block w-full p-3 appearance-none transition-all"
                     id="subject"
                     name="subject"
                     value={formData.subject}
@@ -225,7 +225,7 @@ const ContactUs: React.FC = () => {
                   Message
                 </label>
                 <textarea
-                  className="bg-[#0a0a16] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block w-full p-3 placeholder-slate-600 transition-all resize-none"
+                  className="bg-[#000] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-primary block w-full p-3 placeholder-slate-600 transition-all resize-none"
                   id="message"
                   name="message"
                   placeholder="Describe your issue or requirements..."
@@ -345,7 +345,7 @@ const FormInput: React.FC<{
       value={value}
       onChange={onChange}
       required={required}
-      className="bg-[#0a0a16] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-accent/50 block w-full p-3 placeholder-slate-600 transition-all"
+      className="bg-[#000] border border-accent/30 text-white text-sm rounded-lg focus:ring-1 focus:ring-primary focus:border-accent/50 block w-full p-3 placeholder-slate-600 transition-all"
     />
   </div>
 );

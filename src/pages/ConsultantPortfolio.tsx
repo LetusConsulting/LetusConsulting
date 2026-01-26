@@ -7,6 +7,13 @@ import { consultants } from "../data/consultants";
 const ConsultantsPage: React.FC = () => {
   return (
     <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
+       <div
+        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        style={{
+          backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
+          backgroundSize: "24px 24px",
+        }}
+      ></div>
       <Header />
       <main className="flex-grow flex flex-col items-center w-full">
         {/* Hero Section */}
@@ -24,7 +31,7 @@ const ConsultantsPage: React.FC = () => {
                 <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1 w-fit">
                   <span className="h-2 w-2 rounded-full bg-accent animate-pulse"></span>
                   <span className="text-xs font-mono text-gray-400">
-                    System Status: ONLINE
+                    System Status: Online
                   </span>
                 </div>
                 <h1 className="text-5xl md:text-7xl font-black tracking-tighter text-white text-glow">
