@@ -5,7 +5,7 @@ import type { Service } from "../types/service";
 
 const services: Service[] = [
   {
-    module: "root/modules/it_infrastructure",
+    module: "root/modules/IT_infrastructure",
     icon: "dns",
     title: "IT Infrastructure",
     subtitle: "// The Backbone",
@@ -13,10 +13,10 @@ const services: Service[] = [
       "Robust foundational architecture designed for high availability. We handle the heavy lifting of server management, virtualization, and hardware lifecycle so your applications have a solid place to live.",
     stats: ["[status: optimized]", "[uptime: 99.99%]"],
     features: [
-      "Infrastructure Assessment & Planning",
+      "Design & Planning",
       "Cloud & On‑Premises Deployment",
       "Maintenance & Support",
-      "Disaster Recovery & Business Continuity.",
+      "Procurement",
     ],
   },
   {
@@ -28,7 +28,7 @@ const services: Service[] = [
       "High-speed, secure, and redundant network architectures. We connect your teams, offices, and data centers with precision engineering to ensure zero bottlenecks in your workflow.",
     stats: ["[latency: <1ms]", "[bandwidth: unltd]"],
     features: [
-      "Design & Planning",
+      "Design & Architecture",
       "Installation & Configuration",
       "Monitoring & Optimization",
       "Security & Access Control",
@@ -43,9 +43,9 @@ const services: Service[] = [
       "Proactive defense mechanisms protecting your critical assets. We don't just patch holes; we architect environments that are hostile to intruders but seamless for authorized users.",
     stats: ["[threats: blocked]", "[protocol: zero_trust]"],
     features: [
-      "Security Operations",
-      "Compliance & Audit",
       "Security Engineering",
+      "Compliance & Audit",
+      "Penetration Testing",
       "Security-awareness Training",
     ],
   },
@@ -74,9 +74,9 @@ const services: Service[] = [
     stats: ["[language: polyglot]", "[bugs: 0]"],
     features: [
       "Full-stack Engineering",
-      "API Integration",
+      "No-Code Development",
       "Legacy Refactoring",
-      "Mobile Solutions",
+      "Product Design & Prototyping",
     ],
   },
 ];
@@ -85,7 +85,7 @@ const ServicesPage: React.FC = () => {
   return (
     <div className="bg-background-dark min-h-screen flex flex-col font-display text-primary overflow-x-hidden selection:bg-accent selection:text-black">
       <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        className="fixed inset-0 z-0 pointer-events-none opacity-5 grayscale"
         style={{
           backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
           backgroundSize: "24px 24px",
@@ -104,7 +104,7 @@ const ServicesPage: React.FC = () => {
                 backgroundSize: "24px 24px",
               }}
             />
-            <div className="absolute top-0 right-0 w-64 h-64 bg-accent/20 rounded-full blur-3xl pointer-events-none" />
+            <div className="absolute -top-24 -right-24 w-[28rem] h-[28rem] bg-accent/10 rounded-full blur-[100px] pointer-events-none" />
             <div className="relative z-10 flex flex-col md:flex-row gap-8 p-8 md:p-16 items-end md:items-center justify-between min-h-[300px]">
               <div className="flex flex-col gap-4 max-w-2xl">
                 <div className="inline-flex items-center gap-2 rounded-full border border-[#333] bg-[#000] px-3 py-1 w-fit">

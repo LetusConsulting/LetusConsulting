@@ -85,7 +85,7 @@ const ContactUs: React.FC = () => {
     <div className="bg-black text-white font-display overflow-x-hidden antialiased min-h-screen flex flex-col selection:bg-primary selection:text-white">
       {/* Background Elements */}
       <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        className="fixed inset-0 z-0 pointer-events-none opacity-5 grayscale"
         style={{
           backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
           backgroundSize: "24px 24px",

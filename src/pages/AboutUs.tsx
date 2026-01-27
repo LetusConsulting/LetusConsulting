@@ -7,7 +7,7 @@ const App: React.FC = () => {
   return (
     <div className="bg-background-dark dark:bg-background-dark text-accent dark:text-white font-display overflow-x-hidden">
        <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        className="fixed inset-0 z-0 pointer-events-none opacity-5 grayscale"
         style={{
           backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
           backgroundSize: "24px 24px",
@@ -26,16 +26,16 @@ const App: React.FC = () => {
                     System Status: Online
                   </span>
                 </div>
-            <h1 className="!text-[110px] md:text-6xl font-black leading-[1.1] tracking-[-0.033em] text-accent dark:text-white">
+            <h1 className="!text-[70px] md:text-6xl font-black leading-[1.1] tracking-[-0.033em] text-accent dark:text-white">
               We do IT{" "}
               {/* <div className="text-lg font-normal leading-relaxed dark:text-primary  text-primary blinking-cursor ">
               For your business, and beyond ...
               </div> */}
             </h1>
-            <div className="text-[30px] font-normal leading-relaxed dark:text-primary  text-primary blinking-cursor ">
-              For your business, and beyond ...
+            <div className="text-[22px] font-normal leading-relaxed dark:text-primary  text-primary blinking-cursor ">
+              For your business, and beyond
               </div>
-            <h2 className="text-lg font-normal leading-relaxed  text-slate-600 dark:text-gray-400">
+            <p className="text-base text-slate-500 dark:text-gray-400">
               Letus is an IT consulting firm that takes the complexity out of
               technology so you can focus on what matters most: growth,
               innovation, and impact. We’re not just an IT consulting firm,
@@ -53,7 +53,7 @@ const App: React.FC = () => {
               With a people-first approach and a passion for practical outcomes,
               we make technology work for you, not the other way around. Ready
               to turn challenges into opportunities? Letus do IT.
-            </h2>
+            </p>
           </div>
           <div className="flex gap-4 pt-2">
             <button className="flex items-center justify-center h-12 px-6 bg-primary hover:bg-accent text-black font-bold rounded-lg shadow-lg shadow-primary/25">
@@ -96,7 +96,7 @@ const App: React.FC = () => {
           it’s strengthening infrastructure, securing your systems, modernizing
           workflows, or building custom tools that accelerate performance.
         </p>
-      </section> */}
+      </section>
 
       {/* Features Section */}
       <section className="px-6 md:px-20 xl:px-40 py-10 md:py-20 max-w-[1200px] mx-auto">
@@ -105,7 +105,7 @@ const App: React.FC = () => {
             <h2 className="text-3xl md:text-4xl font-black leading-tight tracking-tight text-accent dark:text-white">
               The Gen Z Approach
             </h2>
-            <p className="text-base text-slate-600 dark:text-gray-400">
+            <p className="text-base text-slate-500 dark:text-gray-400">
               We put people first and focus on results that actually matter. Our
               goal is simple: make technology practical, accessible, and
               impactful for your business. Whether you are solving everyday IT

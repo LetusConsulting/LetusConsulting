@@ -23,7 +23,7 @@ const HomePage = () => {
   return (
     <div className="relative flex w-full flex-col group/design-root overflow-x-hidden">
        <div
-        className="fixed inset-0 z-0 pointer-events-none opacity-10"
+        className="fixed inset-0 z-0 pointer-events-none opacity-5 grayscale"
         style={{
           backgroundImage: "radial-gradient(#22c55e 1px, transparent 1px)",
           backgroundSize: "24px 24px",
@@ -34,7 +34,7 @@ const HomePage = () => {
 
       {/* HERO */}
       <section className="relative min-h-screen flex flex-col justify-center pt-32 pb-20 overflow-hidden">
-        <div className="absolute top-1/4 right-[10%] w-[400px] h-[400px] bg-accent/20 rounded-full pointer-events-none blur-[190px] " />
+        <div className="absolute top-1/4 -right-16 w-[600px] h-[600px] bg-accent/5 rounded-full pointer-events-none blur-[100px]" />
         <div className="absolute bottom-1/4 left-[5%] w-[250px] h-[250px]  rounded-full pointer-events-none blur-[90px]" />
 
         <div className="w-full max-w-[1200px] mx-auto px-6 lg:px-12 flex flex-col justify-center h-full z-10">
@@ -47,14 +47,17 @@ const HomePage = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold leading-[0.9] tracking-tighter text-white mix-blend-difference">
-             LETUS DO IT
-              <span className="pl-2  text-transparent bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
-               
-              </span>
-              <span className="text-accent animate-blink">.</span>
+            DIGITAL
+            <span className="block bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
+            REALITY
+            </span>
+            <span className="bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
+            ENGINEERS
+            </span>
+            <span className="text-accent animate-blink">.</span>
             </h1>
 
-            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt-6 pl-6 border-l-2 border-accent/30 font-body">
+            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt--6 pl-4 border-l-2 border-accent/50 font-body">
               We handle the tech, so you can handle business.
             </p>
 
