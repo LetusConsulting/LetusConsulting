@@ -28,6 +28,11 @@ This will launch the app locally on your browser
 
 happy viewing!!!
 
+To build the project and generate the `dist` folder, run the following:
+```
+npm run build
+```
+
 
 Currently, two official plugins are available:
 
