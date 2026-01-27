@@ -131,63 +131,71 @@ const HomePage = () => {
           </div>
 
           {/* Values Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            {[
-              {
-                letter: "L",
-                title: "Leadership through Service",
-                description:
-                  "We lead by empowering others, taking responsibility, and serving customers, partners, and communities with integrity.",
-              },
-              {
-                letter: "U",
-                title: "Unity & Collaboration",
-                description:
-                  "We believe the best outcomes come from teamwork, mutual respect, and shared purpose.",
-              },
-              {
-                letter: "E",
-                title: "Excellence in Execution",
-                description:
-                  "We commit to high standards, precision, and continuous improvement in everything we deliver.",
-              },
+         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+  {[
+    {
+      letter: "L",
+      title: "Leadership through Service",
+      description:
+        "We lead by empowering others, taking responsibility, and serving customers, partners, and communities with integrity.",
+      orderClass: "order-1 md:order-none",
+    },
+    {
+      letter: "U",
+      title: "Unity & Collaboration",
+      description:
+        "We believe the best outcomes come from teamwork, mutual respect, and shared purpose.",
+      orderClass: "order-4 md:order-none",
+    },
+    {
+      letter: "E",
+      title: "Excellence in Execution",
+      description:
+        "We commit to high standards, precision, and continuous improvement in everything we deliver.",
+      orderClass: "order-2 md:order-none",
+    },
+    {
+      letter: "S",
+      title: "Sustainable Impact",
+      description:
+        "We focus on long-term value—creating solutions that are responsible, scalable, and beneficial for the future.",
+      orderClass: "order-5 md:order-none",
+    },
+    {
+      letter: "T",
+      title: "Trust & Transparency",
+      description:
+        "We build lasting relationships through honesty, accountability, and open communication.",
+      orderClass: "order-3 md:order-none",
+    },
+  ].map((value, idx) => (
+    <div
+      key={idx}
+      className={`group relative p-10 rounded-[2rem] border border-white/5 bg-[#0a0a0a]
+        transition-all duration-500 hover:border-accent/40
+        hover:shadow-[0_0_32px_rgba(34,197,94,0.12)]
+        ${value.orderClass}`}
+    >
+      {/* Letter */}
+      <div className="absolute -top-6 -left-6 w-14 h-14 rounded-2xl bg-[#111] border border-white/10 flex items-center justify-center font-mono text-xl font-bold text-accent group-hover:scale-110 transition-transform">
+        {value.letter}
+      </div>
 
-              {
-                letter: "S",
-                title: "Sustainable Impact",
-                description:
-                  "We focus on long-term value—creating solutions that are responsible, scalable, and beneficial for the future.",
-              },
-              {
-                letter: "T",
-                title: "Trust & Transparency",
-                description:
-                  "We build lasting relationships through honesty, accountability, and open communication.",
-              },
-            ].map((value, idx) => (
-              <div
-                key={idx}
-                className="group relative p-10 rounded-[2rem] border border-white/5 bg-[#0a0a0a] transition-all duration-500 hover:border-accent/40 hover:shadow-[0_0_32px_rgba(34,197,94,0.12)]"
-              >
-                {/* Letter */}
-                <div className="absolute -top-6 -left-6 w-14 h-14 rounded-2xl bg-[#111] border border-white/10 flex items-center justify-center font-mono text-xl font-bold text-accent group-hover:scale-110 transition-transform">
-                  {value.letter}
-                </div>
+      {/* Content */}
+      <h4 className="text-2xl font-bold text-white mb-4">
+        {value.title}
+      </h4>
 
-                {/* Content */}
-                <h4 className="text-2xl font-bold text-white mb-4">
-                  {value.title}
-                </h4>
+      <p className="text-[#888] leading-relaxed text-sm max-w-md">
+        {value.description}
+      </p>
 
-                <p className="text-[#888] leading-relaxed text-sm max-w-md">
-                  {value.description}
-                </p>
+      {/* Subtle scan line */}
+      <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-gradient-to-r from-transparent via-accent/5 to-transparent" />
+    </div>
+  ))}
+</div>
 
-                {/* Subtle scan line */}
-                <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-gradient-to-r from-transparent via-accent/5 to-transparent" />
-              </div>
-            ))}
-          </div>
 
           {/* Footer Line */}
           <div className="mt-24 text-center">
