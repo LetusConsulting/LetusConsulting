@@ -140,11 +140,11 @@ const ContactUs: React.FC = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 mt-2">
+          {/* <div className="flex gap-6 mt-2">
             <SocialLink label="GitHub" />
             <SocialLink label="LinkedIn" />
             <SocialLink label="Twitter" />
-          </div>
+          </div> */}
         </div>
 
         {/* Right Column: Form */}
@@ -313,17 +313,17 @@ const ContactCard: React.FC<{
   </div>
 );
 
-const SocialLink: React.FC<{ label: string }> = ({ label }) => (
-  <a
-    className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
-    href="#"
-  >
-    <span className="text-primary font-mono group-hover:translate-x-1 transition-transform">
-      &gt;
-    </span>
-    {label}
-  </a>
-);
+// const SocialLink: React.FC<{ label: string }> = ({ label }) => (
+//   <a
+//     className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
+//     href="#"
+//   >
+//     <span className="text-primary font-mono group-hover:translate-x-1 transition-transform">
+//       &gt;
+//     </span>
+//     {label}
+//   </a>
+// );
 
 const FormInput: React.FC<{
   label: string;
