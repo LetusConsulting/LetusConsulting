@@ -95,7 +95,7 @@ const ServicesPage: React.FC = () => {
 
       <main className="flex-grow flex flex-col items-center w-full">
         {/* Hero Section */}
-        <section className="w-full max-w-[1280px] px-4 md:px-10 lg:px-40 py-12 md:py-20 lg:mt-12 md:mt-12 sm:mt-24">
+        <section className="w-full max-w-[1280px] px-4 md:px-10 lg:px-40 py-12 md:py-20 lg:mt-12 md:mt-12 sm:mt-40">
           <div className="relative overflow-hidden rounded-xl bg-surface-dark border border-[#222]">
             <div
               className="absolute inset-0 opacity-20"
