@@ -57,7 +57,7 @@ const HomePage = () => {
             <span className="text-accent animate-blink">.</span>
             </h1>
 
-            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt--6 pl-4 border-l-2 border-accent/50 font-body">
+            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt-6 pl-4 border-l-2 border-accent/50 font-body">
               We handle the tech, so you can handle business.
             </p>
 

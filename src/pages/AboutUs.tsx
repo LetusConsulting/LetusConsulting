@@ -17,7 +17,7 @@ const App: React.FC = () => {
       <Header />
       {/* slate900 - accent */}
       {/* Hero Section */}
-      <section className="px-6 md:px-20 xl:px-40 py-10 md:py-20 flex flex-col lg:flex-row items-center gap-10 max-w-[1200px] mx-auto mt-28 lg:mt-12 md:mt-12 sm:mt-40">
+      <section className="px-6 md:px-20 xl:px-40 py-10 md:py-20 flex flex-col lg:flex-row items-center gap-10 max-w-[1200px] mx-auto mt-20 lg:mt-12 md:mt-12 ">
         <div className="flex flex-col gap-6 lg:w-2/2 justify-center">
           <div className="flex flex-col gap-4">
             <div className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-black/50 px-3 py-1 w-fit">

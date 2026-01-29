@@ -96,7 +96,7 @@ const ContactUs: React.FC = () => {
       <Header />
 
       {/* Main Content */}
-      <main className="relative z-10 flex-1 w-full max-w-[1200px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 lg:gap-24 lg:mt-12 md:mt-12 sm:mt-48">
+      <main className="relative z-10 flex-1 w-full max-w-[1200px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 lg:gap-24 lg:mt-12 md:mt-12 mt-20">
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-10">
           {/* Heading */}
