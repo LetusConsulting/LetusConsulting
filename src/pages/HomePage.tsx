@@ -47,7 +47,7 @@ const HomePage = () => {
             </div>
 
             <h1 className="text-5xl md:text-7xl lg:text-9xl font-bold leading-[0.9] tracking-tighter text-white mix-blend-difference">
-            DIGITAL
+            TEST
             <span className="block bg-clip-text bg-gradient-to-r from-[#888] to-[#ccc]">
             REALITY
             </span>
