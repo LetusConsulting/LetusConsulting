@@ -35,10 +35,10 @@ export const consultants: Consultant[] = [
       label: "LinkedIn",
       url: "https://www.linkedin.com/in/samson-idowu",
     },
-    {
-      label: "Portfolio",
-      url: "https://samson.dev",
-    },
+    // {
+    //   label: "Portfolio",
+    //   url: "https://samson.dev",
+    // },
   ],
   },
  
@@ -69,10 +69,10 @@ export const consultants: Consultant[] = [
         label: "LinkedIn",
         url: "https://www.linkedin.com/in/fatimabello",
       },
-      {
-        label: "Portfolio",
-        url: "https://fatima.dev",
-      },
+      // {
+      //   label: "Portfolio",
+      //   url: "https://fatima.dev",
+      // },
     ],
   },
  
