@@ -25,8 +25,8 @@ export const consultants: Consultant[] = [
     //   { title: "Ransomware Recovery", description: "Restored critical infrastructure in 4 hours post-attack." }
     // ],
     metrics: {
-      Clients: "100",
-      Projects: "50",
+      Clients: "100+",
+      Projects: "50+",
       Rating: "4.9/5"
     },
     description: "Samson is a cybersecurity veteran with over 10 years of experience leading global security initiatives. He has a proven track record of protecting critical infrastructure and mitigating cyber threats for Fortune 500 companies. Samson's expertise spans across network security, compliance, and incident response, making him a trusted advisor for organizations looking to strengthen their security posture.",
@@ -59,8 +59,8 @@ export const consultants: Consultant[] = [
     //   { title: "Supply Chain Optimization", description: "Automated logistics routing saving 12% operational costs." }
     // ],
     metrics: {
-      Clients: "85",
-      Projects: "30",
+      Clients: "85+",
+      Projects: "30+",
       Rating: "4.8/5"
     },
     description: "Fatima is a software development lead with over 8 years of experience in building scalable and high-performance applications. She specializes in full-stack development and AI engineering. Fatima has led multiple successful projects in fintech and enterprise environments, delivering solutions that drive business value and operational efficiency.",
