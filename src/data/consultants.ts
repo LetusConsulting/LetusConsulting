@@ -1,6 +1,7 @@
 // src/data/consultants.ts
 import type { Consultant } from "../types/consultant";
 import Samson from "../assets/icons/Samson.jpeg";
+import Fatima from "../assets/icons/Fatima.jpeg";
 // or relative path:
 // import DavidVossAvatar from "../assets/images/david-voss.jpg";
 
@@ -10,7 +11,7 @@ export const consultants: Consultant[] = [
    {
     id: 1,
     name: "Samson Idowu",
-    title: "The Operator",
+    title: "Managing Director",
     avatar: Samson,
     verified: true,
     skills: [
@@ -19,62 +20,60 @@ export const consultants: Consultant[] = [
       { name: "Compliance", icon: "rule" },
       { name: "Bash", icon: "terminal" }
     ],
-    projects: [
-      { title: "Global SecOps Implementation", description: "Established 24/7 SOC for multinational retailer." },
-      { title: "Ransomware Recovery", description: "Restored critical infrastructure in 4 hours post-attack." }
-    ],
+    // projects: [
+    //   { title: "Global SecOps Implementation", description: "Established 24/7 SOC for multinational retailer." },
+    //   { title: "Ransomware Recovery", description: "Restored critical infrastructure in 4 hours post-attack." }
+    // ],
     metrics: {
       Clients: "100",
       Projects: "50",
       Rating: "4.9/5"
     },
-    description: ""
+    description: "Samson is a cybersecurity veteran with over 10 years of experience leading global security initiatives. He has a proven track record of protecting critical infrastructure and mitigating cyber threats for Fortune 500 companies. Samson's expertise spans across network security, compliance, and incident response, making him a trusted advisor for organizations looking to strengthen their security posture.",
+    profileLinks: [
+    {
+      label: "LinkedIn",
+      url: "https://www.linkedin.com/in/samson-idowu",
+    },
+    {
+      label: "Portfolio",
+      url: "https://samson.dev",
+    },
+  ],
   },
+ 
   {
     id: 2,
-    name: "Alex Mercer",
-    title: "The Architect",
-    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuBW3jJsyLQsKM7Mettau_VAT_ntSm7i8mNzErTvpvXDOsx_k26yqfPsuExpZKINxDY8LuKbtez7n8EZSlTpDMwL5KwNUv5R95jo8YGq2c4FWhjl2xV-bVzjbP3faGiYSous4ZNEW7w3N-_zUZIiLOlurDhkTUv8lTkelVSh_X2jbOSg3Z9FREnLP04iq3w_guXDxumDXHDw3aPllkR0D-uFplwLO6eITzZOu5XQ_wuBZPGaAIGOcR_t313mpntKeCp4GY-om54pJNVm",
-    verified: true,
-    skills: [
-      { name: "Cloud Architecture", icon: "cloud" },
-      { name: "DevOps", icon: "settings" },
-      { name: "Security", icon: "shield" },
-      { name: "Python", icon: "code" }
-    ],
-    projects: [
-      { title: "FinTech Core Migration", description: "Migrated monolith to microservices for top 10 bank." },
-      { title: "Legacy System Overhaul", description: "Reduced technical debt by 40% in 6 months." }
-    ],
-    metrics: {
-      Clients: "120",
-      Projects: "45",
-      Rating: "4.9/5"
-    },
-    description: ""
-  },
-  {
-    id: 3,
     name: "Fatima Modupe Bello",
-    title: "The Alchemist",
-    avatar: "https://lh3.googleusercontent.com/aida-public/AB6AXuCkD2WiKx2i0YBKycyoh1__A0iDWy5SwhzAMXcVTY-Xffp58_x0V4BBiDSkzFUs8Sd9xv2M9n-HjOVUoPnewLJDGs5T3Bo2UU2OxpcsvkrUrMUu-n0KEQEf4r9B3q5GQAAag0E5pn4poLLnng-ekXYX_cbJQ6j9n-HyA4lEe1Oty4Yk_svsuGKnUhBGAIWw3kQsV65HDdI0ufCqeG3uC1mqn2PFQ_1ducQ2xjAdkJ8Dc3pBVlEMYBp2TBt3UIrjaXH8tkcMpwChMxcG",
+    title: "Software Deveopment Lead",
+    avatar: Fatima,
     verified: true,
     skills: [
-      { name: "AI / ML", icon: "memory" },
-      { name: "Big Data", icon: "storage" },
+      { name: "AI Engineering", icon: "memory" },
+      { name: "Data Base", icon: "storage" },
       { name: "Analytics", icon: "insights" },
-      { name: "R / Python", icon: "code" }
+      { name: "Reactjs / Nodejs", icon: "code" }
     ],
-    projects: [
-      { title: "Market Prediction Engine", description: "Built real-time forecasting model with 94% accuracy." },
-      { title: "Supply Chain Optimization", description: "Automated logistics routing saving 12% operational costs." }
-    ],
+    // projects: [
+    //   { title: "Market Prediction Engine", description: "Built real-time forecasting model with 94% accuracy." },
+    //   { title: "Supply Chain Optimization", description: "Automated logistics routing saving 12% operational costs." }
+    // ],
     metrics: {
       Clients: "85",
       Projects: "30",
       Rating: "4.8/5"
     },
-    description: ""
+    description: "Fatima is a software development lead with over 8 years of experience in building scalable and high-performance applications. She specializes in full-stack development and AI engineering. Fatima has led multiple successful projects in fintech and enterprise environments, delivering solutions that drive business value and operational efficiency.",
+    profileLinks: [
+      {
+        label: "LinkedIn",
+        url: "https://www.linkedin.com/in/fatimabello",
+      },
+      {
+        label: "Portfolio",
+        url: "https://fatima.dev",
+      },
+    ],
   },
  
 ];

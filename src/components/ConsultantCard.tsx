@@ -73,7 +73,7 @@ const ConsultantCard: React.FC<Props> = ({ consultant }) => {
           )}
 
           {/* Projects */}
-          {consultant.projects && consultant.projects.length > 0 && (
+          {/* {consultant.projects && consultant.projects.length > 0 && (
             <div className="border-t border-white/10 pt-6">
               <h4 className="text-sm font-bold text-gray-500 mb-4 font-mono uppercase tracking-wider">
                 Project Log
@@ -93,14 +93,30 @@ const ConsultantCard: React.FC<Props> = ({ consultant }) => {
                 ))}
               </div>
             </div>
-          )}
+          )} */}
 
-          {/* Full Profile Button */}
-          <div className="mt-6 flex justify-end">
-            <button className="text-sm font-bold text-white hover:text-accent hover:border-accent underline decoration-white/20 hover:decoration-accent/30 underline-offset-4 flex items-center gap-1 transition-all">
-              Full_Profile <span className="material-symbols-outlined text-sm">arrow_outward</span>
-            </button>
-          </div>
+          {/* Full Profile Button  */}
+          {/* Profile Links */}
+{consultant.profileLinks && consultant.profileLinks.length > 0 && (
+  <div className="mt-6 flex justify-end gap-4 flex-wrap">
+    {consultant.profileLinks.map((link, idx) => (
+      <a
+        key={idx}
+        href={link.url}
+        target="_blank"
+        rel="noopener noreferrer"
+        className="text-sm font-bold text-white hover:text-accent underline decoration-white/20 hover:decoration-accent/30 underline-offset-4 flex items-center gap-1 transition-all"
+      >
+        {link.label}
+        <span className="material-symbols-outlined text-sm">
+          arrow_outward
+        </span>
+      </a>
+    ))}
+  </div>
+)}
+
+        
         </div>
       </div>
     </div>
