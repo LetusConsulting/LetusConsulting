@@ -42,7 +42,7 @@ const HomePage = () => {
             <div className="flex items-center gap-3 mb-4">
               <span className="w-2 h-2 bg-accent rounded-full animate-pulse shadow-[0_0_8px_rgba(0,240,255,0.8)]" />
               <div className="font-mono text-xs text-accent tracking-widest ">
-               System Status: Online
+                System Status: Online
               </div>
             </div>
 
@@ -57,7 +57,7 @@ const HomePage = () => {
             <span className="text-accent animate-blink">.</span>
             </h1>
 
-            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt--6 pl-4 border-l-2 border-accent/50 font-body">
+            <p className="text-lg md:text-xl font-light text-[#888] max-w-xl leading-relaxed mt-6 pl-4 border-l-2 border-accent/50 font-body">
               We handle the tech, so you can handle business.
             </p>
 
@@ -131,7 +131,7 @@ const HomePage = () => {
           </div>
 
           {/* Values Grid */}
-         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
   {[
     {
       letter: "L",
@@ -270,27 +270,35 @@ const HomePage = () => {
                 const Icon = ICONS[item.icon];
 
                 return (
-                  <div
-                    key={item.number}
-                    className="group p-8 border border-white/5 rounded-[2rem] bg-[#0a0a0a] hover:border-accent/40 transition-all duration-500 hover:shadow-[0_0_30px_rgba(0,240,255,0.05)]"
-                  >
-                    <div className="flex justify-between items-start mb-6">
-                      <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
-                        {Icon && (
-                          <Icon className="text-white group-hover:text-accent transition-colors" />
-                        )}
-                      </div>
-                      <span className="font-mono text-xs text-[#444] group-hover:text-accent transition-colors">
-                        {item.number}
-                      </span>
-                    </div>
-                    <h4 className="text-2xl font-bold mb-3 text-white">
-                      {item.title}
-                    </h4>
-                    <p className="text-[#888] text-sm leading-relaxed max-w-md">
-                      {item.description}
-                    </p>
-                  </div>
+                <div
+  key={item.number}
+  className="group relative p-8 border border-white/5 rounded-[2rem] bg-[#0a0a0a]
+    transition-all duration-500 hover:border-accent/40
+    hover:shadow-[0_0_32px_rgba(34,197,94,0.12)]"
+>
+  <div className="flex justify-between items-start mb-6">
+    <div className="w-12 h-12 rounded-full bg-white/5 flex items-center justify-center group-hover:bg-accent/10 transition-colors">
+      {Icon && (
+        <Icon className="text-white group-hover:text-accent transition-colors" />
+      )}
+    </div>
+    <span className="font-mono text-xs text-[#444] group-hover:text-accent transition-colors">
+      {item.number}
+    </span>
+  </div>
+
+  <h4 className="text-2xl font-bold mb-3 text-white">
+    {item.title}
+  </h4>
+
+  <p className="text-[#888] text-sm leading-relaxed max-w-md">
+    {item.description}
+  </p>
+
+  {/* Subtle scan line (same as first div) */}
+  <div className="absolute inset-0 rounded-[2rem] opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none bg-gradient-to-r from-transparent via-accent/5 to-transparent" />
+</div>
+
                 );
               })}
             </div>

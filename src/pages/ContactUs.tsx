@@ -96,7 +96,7 @@ const ContactUs: React.FC = () => {
       <Header />
 
       {/* Main Content */}
-      <main className="relative z-10 flex-1 w-full max-w-[1200px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 lg:gap-24">
+      <main className="relative z-10 flex-1 w-full max-w-[1200px] mx-auto px-6 py-12 md:py-20 flex flex-col md:flex-row gap-12 lg:gap-24 lg:mt-12 md:mt-12 mt-20">
         {/* Left Column */}
         <div className="flex-1 flex flex-col gap-10">
           {/* Heading */}
@@ -140,11 +140,11 @@ const ContactUs: React.FC = () => {
           </div>
 
           {/* Social Links */}
-          <div className="flex gap-6 mt-2">
+          {/* <div className="flex gap-6 mt-2">
             <SocialLink label="GitHub" />
             <SocialLink label="LinkedIn" />
             <SocialLink label="Twitter" />
-          </div>
+          </div> */}
         </div>
 
         {/* Right Column: Form */}
@@ -313,17 +313,17 @@ const ContactCard: React.FC<{
   </div>
 );
 
-const SocialLink: React.FC<{ label: string }> = ({ label }) => (
-  <a
-    className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
-    href="#"
-  >
-    <span className="text-primary font-mono group-hover:translate-x-1 transition-transform">
-      &gt;
-    </span>
-    {label}
-  </a>
-);
+// const SocialLink: React.FC<{ label: string }> = ({ label }) => (
+//   <a
+//     className="flex items-center gap-2 text-slate-400 hover:text-primary transition-colors group"
+//     href="#"
+//   >
+//     <span className="text-primary font-mono group-hover:translate-x-1 transition-transform">
+//       &gt;
+//     </span>
+//     {label}
+//   </a>
+// );
 
 const FormInput: React.FC<{
   label: string;

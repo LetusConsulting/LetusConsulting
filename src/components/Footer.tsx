@@ -13,7 +13,7 @@ const Footer = () => {
             </span>
           </div>
           <div className="flex gap-6 text-[10px] uppercase font-mono tracking-widest text-[#666]">
-            <span>Encryption: AES-256</span>
+            <span>Encryption: IT</span>
             <span>Region: Global</span>
           </div>
         </div>

@@ -9,15 +9,36 @@ export interface Skill {
 }
 
 
-export type Consultant = {
-  id: number;
+// export type Consultant = {
+//   id: number;
+//   name: string;
+//     // image: string;
+//   title: string;
+//   description: string;
+//   avatar: string;
+//   verified?: boolean;
+//   skills: { name: string; icon: string }[];
+//   projects: { title: string; description: string }[];
+//   metrics: { [key: string]: string }; // <-- required
+// };
+
+
+export interface Consultant {
+   id: number;
   name: string;
-    // image: string;
   title: string;
-  description: string;
   avatar: string;
   verified?: boolean;
-  skills: { name: string; icon: string }[];
-  projects: { title: string; description: string }[];
-  metrics: { [key: string]: string }; // <-- required
-};
+  description: string;
+
+  metrics?: Record<string, string | number>;
+  skills?: {
+    name: string;
+    icon: string;
+  }[];
+
+  profileLinks?: {
+    label: string;
+    url: string;
+  }[];
+}
