@@ -127,7 +127,7 @@ export const consultants: Consultant[] = [
       },
       // {
       //   label: "Portfolio",
-      //   url: "https://samson.dev",
+      //   url: "https://uchechukwu.dev",
       // },
     ],
   },
